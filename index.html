@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Desa Tlogo</title>
+
+<link rel="stylesheet" href="style.css">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+<!-- ================= HEADER ================= -->
+
+<header class="header">
+
+    <div class="header-title">
+        DESA TLOGO
+    </div>
+
+    <div class="header-logos">
+        <img src="assets/logo-desa.jpg" class="logo-img" alt="Logo Desa">
+        <img src="assets/logo-klaten.jpg" class="logo-img" alt="Logo Klaten">
+    </div>
+
+    <ul class="menu">
+        <li><a href="index.html">Beranda</a></li>
+        <li><a href="profil.html">Profil</a></li>
+        <li><a href="kegiatan.html">Kegiatan</a></li>
+        <li><a href="galeri.html">Galeri</a></li>
+        <li><a href="kontak.html">Kontak</a></li>
+    </ul>
+
+</header>
+
+<!-- ================= HERO ================= -->
+
+<section class="hero">
+
+    <img src="assets/bg-utama.jpg" class="hero-bg" alt="Desa Tlogo">
+
+    <div class="hero-overlay"></div>
+
+    <div class="hero-text">
+
+        <h1>
+            Selamat Datang di Website Desa Tlogo
+        </h1>
+
+        <p>
+            Kecamatan Prambanan • Kabupaten Klaten • Jawa Tengah
+        </p>
+
+        <br>
+
+        <a href="profil.html" class="btn">
+            Profil Desa
+        </a>
+
+        <a href="kontak.html" class="btn">
+            Hubungi Kami
+        </a>
+
+    </div>
+
+</section>
+
+<!-- ================= STATISTIK ================= -->
+
+<section class="section">
+
+    <div class="card">
+
+        <h2 style="text-align:center;">
+            Statistik Desa
+        </h2>
+
+        <div class="grid-kegiatan">
+
+            <div class="kegiatan-item">
+                <h2>3500+</h2>
+                <p>Penduduk</p>
+            </div>
+
+            <div class="kegiatan-item">
+                <h2>950+</h2>
+                <p>Kepala Keluarga</p>
+            </div>
+
+            <div class="kegiatan-item">
+                <h2>15+</h2>
+                <p>UMKM</p>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ================= SAMBUTAN ================= -->
+
+<section class="section">
+
+    <div class="card">
+
+        <h2>Selamat Datang</h2>
+
+        <p>
+            Selamat datang di Website Resmi Desa Tlogo.
+            Website ini menjadi media informasi dan komunikasi
+            antara pemerintah desa dengan masyarakat.
+        </p>
+
+        <p>
+            Melalui website ini masyarakat dapat memperoleh
+            informasi mengenai profil desa, kegiatan,
+            galeri dokumentasi serta berbagai informasi lainnya.
+        </p>
+
+    </div>
+
+</section>
+
+<!-- ================= VISI ================= -->
+
+<section class="section">
+
+    <div class="card">
+
+        <h2>Visi Desa</h2>
+
+        <div class="box-visi">
+
+            "Mewujudkan Desa Tlogo yang maju,
+            mandiri, sejahtera, dan berbudaya."
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ================= GALERI DESA ================= -->
+
+<section class="section">
+
+    <div class="welcome-card">
+
+        <h2>Dokumentasi Desa</h2>
+
+        <p>
+            Lihat berbagai dokumentasi kegiatan masyarakat,
+            pembangunan desa, dan acara budaya Desa Tlogo.
+        </p>
+
+        <a href="galeri.html" class="btn">
+            Lihat Galeri
+        </a>
+
+    </div>
+
+</section>
+
+<!-- ================= GOOGLE MAPS ================= -->
+
+<section class="section">
+
+    <div class="card">
+
+        <h2>Lokasi Desa Tlogo</h2>
+
+        <iframe
+        src="https://www.google.com/maps?q=Desa+Tlogo+Prambanan+Klaten&output=embed"
+        width="100%"
+        height="400"
+        style="border:0;border-radius:12px;"
+        loading="lazy">
+        </iframe>
+
+    </div>
+
+</section>
+
+<!-- ================= KONTAK CEPAT ================= -->
+
+<section class="section">
+
+    <div class="card" style="text-align:center;">
+
+        <h2>Kontak Desa</h2>
+
+        <p>
+            Desa Tlogo, Kecamatan Prambanan,
+            Kabupaten Klaten
+        </p>
+
+        <p>
+            📞 0877-3916-8023
+        </p>
+
+        <a href="https://wa.me/6287739168023"
+           target="_blank"
+           class="btn">
+
+           Chat WhatsApp
+
+        </a>
+
+    </div>
+
+</section>
+
+<!-- ================= LIGHTBOX ================= -->
+
+<div id="lightbox" class="lightbox">
+
+    <span class="close-btn" onclick="closeImage()">
+        &times;
+    </span>
+
+    <img id="lightbox-img" src="" alt="Preview">
+
+</div>
+
+<!-- ================= FOOTER ================= -->
+
+<footer>
+
+    <h3>DESA TLOGO</h3>
+
+    <p>
+        Kecamatan Prambanan, Kabupaten Klaten
+    </p>
+
+    <p>
+        © 2026 Desa Tlogo
+    </p>
+
+</footer>
+
+<!-- ================= WHATSAPP FLOAT ================= -->
+
+<a href="https://wa.me/6287739168023"
+   class="wa-float"
+   target="_blank">
+
+   💬
+
+</a>
+
+<!-- ================= BACK TO TOP ================= -->
+
+<a href="#" class="back-top">
+    ↑
+</a>
+
+<!-- ================= SCRIPT ================= -->
+
+<script>
+
+function openImage(src){
+    document.getElementById("lightbox").style.display = "flex";
+    document.getElementById("lightbox-img").src = src;
+}
+
+function closeImage(){
+    document.getElementById("lightbox").style.display = "none";
+}
+
+</script>
+
+<script src="script.js"></script>
+
+</body>
+</html>

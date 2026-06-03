@@ -1,0 +1,929 @@
+/* ====================================
+   DESA TLOGO PREMIUM WEBSITE
+==================================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:'Poppins',sans-serif;
+    background:#f8fafc;
+    color:#1e293b;
+    overflow-x:hidden;
+}
+
+/* ====================================
+   HEADER
+==================================== */
+
+.header{
+
+    position:fixed;
+    top:0;
+    left:0;
+
+    width:100%;
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    padding:15px 40px;
+
+    background:rgba(15,23,42,.95);
+
+    backdrop-filter:blur(10px);
+
+    z-index:9999;
+}
+
+.header-title{
+
+    color:white;
+    font-size:24px;
+    font-weight:700;
+    letter-spacing:1px;
+}
+
+.header-logos{
+
+    display:flex;
+    align-items:center;
+    gap:10px;
+}
+
+.logo-img{
+
+    width:45px;
+    height:45px;
+
+    border-radius:50%;
+
+    object-fit:cover;
+
+    background:white;
+    padding:3px;
+}
+
+.menu{
+
+    display:flex;
+    gap:25px;
+
+    list-style:none;
+}
+
+.menu a{
+
+    color:white;
+    text-decoration:none;
+
+    font-weight:500;
+
+    transition:.3s;
+}
+
+.menu a:hover{
+
+    color:#38bdf8;
+}
+
+/* ====================================
+   HERO
+==================================== */
+
+.hero{
+
+    position:relative;
+
+    width:100%;
+    height:100vh;
+
+    overflow:hidden;
+}
+
+.hero-bg{
+
+    width:100%;
+    height:100%;
+
+    object-fit:cover;
+}
+
+.hero-overlay{
+
+    position:absolute;
+
+    top:0;
+    left:0;
+
+    width:100%;
+    height:100%;
+
+    background:
+    linear-gradient(
+        rgba(0,0,0,.55),
+        rgba(0,0,0,.65)
+    );
+}
+
+.hero-text{
+
+    position:absolute;
+
+    top:50%;
+    left:50%;
+
+    transform:
+    translate(-50%,-50%);
+
+    text-align:center;
+
+    color:white;
+
+    width:90%;
+    max-width:900px;
+}
+
+.hero-text h1{
+
+    font-size:60px;
+    margin-bottom:15px;
+
+    text-shadow:
+    0 5px 15px rgba(0,0,0,.3);
+}
+
+.hero-text p{
+
+    font-size:20px;
+
+    margin-bottom:25px;
+}
+
+/* ====================================
+   BUTTON
+==================================== */
+
+.btn{
+
+    display:inline-block;
+
+    padding:14px 28px;
+
+    border-radius:50px;
+
+    background:#38bdf8;
+
+    color:white;
+
+    text-decoration:none;
+
+    font-weight:600;
+
+    transition:.3s;
+
+    margin:5px;
+}
+
+.btn:hover{
+
+    transform:translateY(-4px);
+
+    background:#0284c7;
+}
+
+/* ====================================
+   SECTION
+==================================== */
+
+.section{
+
+    padding:90px 20px;
+}
+
+.section-title{
+
+    text-align:center;
+
+    font-size:40px;
+
+    margin-bottom:40px;
+
+    color:#0f172a;
+}
+
+/* ====================================
+   CARD
+==================================== */
+
+.card{
+
+    background:white;
+
+    max-width:1200px;
+
+    margin:auto;
+
+    padding:35px;
+
+    border-radius:25px;
+
+    box-shadow:
+    0 10px 30px rgba(0,0,0,.08);
+
+    transition:.3s;
+}
+
+.card:hover{
+
+    transform:translateY(-5px);
+}
+
+/* ====================================
+   STATISTIK
+==================================== */
+
+.stats{
+
+    display:grid;
+
+    grid-template-columns:
+    repeat(auto-fit,minmax(220px,1fr));
+
+    gap:25px;
+
+    max-width:1200px;
+
+    margin:60px auto;
+
+    padding:0 20px;
+}
+
+.stat-card{
+
+    background:white;
+
+    padding:35px;
+
+    border-radius:20px;
+
+    text-align:center;
+
+    box-shadow:
+    0 10px 25px rgba(0,0,0,.08);
+
+    transition:.3s;
+}
+
+.stat-card:hover{
+
+    transform:translateY(-8px);
+}
+
+.stat-card h2{
+
+    font-size:42px;
+
+    color:#0284c7;
+
+    margin-bottom:10px;
+}
+
+.stat-card p{
+
+    color:#64748b;
+
+    font-size:16px;
+}
+
+/* ====================================
+   WELCOME
+==================================== */
+
+.welcome-card{
+
+    max-width:1000px;
+
+    margin:auto;
+
+    background:white;
+
+    padding:40px;
+
+    border-radius:25px;
+
+    text-align:center;
+
+    box-shadow:
+    0 10px 25px rgba(0,0,0,.08);
+}
+
+.welcome-card h2{
+
+    margin-bottom:20px;
+
+    color:#0f172a;
+}
+
+.welcome-card p{
+
+    color:#475569;
+
+    line-height:1.9;
+
+    margin-bottom:15px;
+}
+
+/* ====================================
+   VISI DESA
+==================================== */
+
+.vision-box{
+
+    max-width:900px;
+
+    margin:auto;
+
+    text-align:center;
+
+    background:
+    linear-gradient(
+        135deg,
+        #0f172a,
+        #1e293b
+    );
+
+    color:white;
+
+    padding:50px;
+
+    border-radius:25px;
+}
+
+.vision-box h2{
+
+    margin-bottom:20px;
+
+    font-size:32px;
+}
+
+.vision-box p{
+
+    font-size:20px;
+
+    line-height:1.8;
+}
+
+/* ====================================
+   PROFIL
+==================================== */
+
+.profil-card{
+
+    text-align:center;
+}
+
+.profil-img{
+
+    width:100%;
+
+    max-height:450px;
+
+    object-fit:cover;
+
+    border-radius:20px;
+
+    cursor:pointer;
+
+    box-shadow:
+    0 10px 25px rgba(0,0,0,.15);
+
+    transition:.4s;
+}
+
+.profil-img:hover{
+
+    transform:scale(1.02);
+}
+
+.box-visi{
+
+    background:#0f172a;
+
+    color:white;
+
+    padding:25px;
+
+    border-radius:15px;
+
+    margin:25px 0;
+}
+
+.misi-list{
+
+    text-align:left;
+
+    max-width:800px;
+
+    margin:auto;
+
+    padding-left:25px;
+}
+
+.misi-list li{
+
+    margin-bottom:12px;
+}
+
+/* ====================================
+   KONTAK
+==================================== */
+
+.contact-grid{
+
+    display:grid;
+
+    grid-template-columns:
+    repeat(2,1fr);
+
+    gap:30px;
+}
+
+.contact-card{
+
+    background:white;
+
+    padding:30px;
+
+    border-radius:20px;
+
+    box-shadow:
+    0 10px 25px rgba(0,0,0,.08);
+}
+
+.contact-card h3{
+
+    margin-bottom:15px;
+
+    color:#0f172a;
+}
+
+.contact-card p{
+
+    margin-bottom:10px;
+
+    color:#475569;
+}
+
+/* ====================================
+   KEGIATAN PREMIUM
+==================================== */
+
+.activity-grid{
+
+    display:grid;
+
+    grid-template-columns:
+    repeat(auto-fit,minmax(320px,1fr));
+
+    gap:25px;
+}
+
+.activity-card{
+
+    background:white;
+
+    border-radius:20px;
+
+    overflow:hidden;
+
+    box-shadow:
+    0 10px 25px rgba(0,0,0,.08);
+
+    transition:.4s;
+}
+
+.activity-card:hover{
+
+    transform:translateY(-10px);
+}
+
+.activity-card img{
+
+    width:100%;
+
+    height:240px;
+
+    object-fit:cover;
+
+    cursor:pointer;
+
+    transition:.4s;
+}
+
+.activity-card:hover img{
+
+    transform:scale(1.05);
+}
+
+.activity-content{
+
+    padding:25px;
+}
+
+.activity-content h3{
+
+    margin-bottom:10px;
+
+    color:#0f172a;
+}
+
+.activity-content p{
+
+    color:#64748b;
+}
+
+/* ====================================
+   GALERI PREMIUM
+==================================== */
+
+.gallery-premium{
+
+    display:grid;
+
+    grid-template-columns:
+    repeat(auto-fit,minmax(250px,1fr));
+
+    gap:20px;
+}
+
+.gallery-item{
+
+    overflow:hidden;
+
+    border-radius:20px;
+
+    box-shadow:
+    0 10px 25px rgba(0,0,0,.08);
+}
+
+.gallery-item img{
+
+    width:100%;
+
+    height:250px;
+
+    object-fit:cover;
+
+    cursor:pointer;
+
+    transition:.5s;
+}
+
+.gallery-item:hover img{
+
+    transform:scale(1.12);
+
+    filter:brightness(1.1);
+}
+
+/* ====================================
+   LIGHTBOX FULLSCREEN
+==================================== */
+
+.lightbox{
+
+    display:none;
+
+    position:fixed;
+
+    top:0;
+    left:0;
+
+    width:100%;
+    height:100%;
+
+    background:rgba(0,0,0,.95);
+
+    justify-content:center;
+    align-items:center;
+
+    z-index:999999;
+}
+
+.lightbox img{
+
+    max-width:95%;
+    max-height:90%;
+
+    border-radius:15px;
+
+    box-shadow:
+    0 0 25px rgba(255,255,255,.15);
+}
+
+.close-btn{
+
+    position:absolute;
+
+    top:20px;
+    right:35px;
+
+    color:white;
+
+    font-size:55px;
+
+    cursor:pointer;
+
+    transition:.3s;
+}
+
+.close-btn:hover{
+
+    color:#38bdf8;
+}
+
+/* ====================================
+   GOOGLE MAPS
+==================================== */
+
+.maps-container{
+
+    overflow:hidden;
+
+    border-radius:20px;
+
+    box-shadow:
+    0 10px 25px rgba(0,0,0,.08);
+}
+
+/* ====================================
+   FOOTER MODERN
+==================================== */
+
+.footer{
+
+    background:
+    linear-gradient(
+        135deg,
+        #0f172a,
+        #1e293b
+    );
+
+    color:white;
+
+    text-align:center;
+
+    padding:60px 20px;
+
+    margin-top:60px;
+}
+
+.footer h3{
+
+    font-size:28px;
+
+    margin-bottom:10px;
+}
+
+.footer p{
+
+    opacity:.9;
+
+    margin-top:8px;
+}
+
+/* ====================================
+   WHATSAPP FLOATING
+==================================== */
+
+.wa-float{
+
+    position:fixed;
+
+    right:25px;
+    bottom:90px;
+
+    width:60px;
+    height:60px;
+
+    border-radius:50%;
+
+    background:#25D366;
+
+    color:white;
+
+    display:flex;
+
+    justify-content:center;
+    align-items:center;
+
+    text-decoration:none;
+
+    font-size:28px;
+
+    box-shadow:
+    0 5px 15px rgba(0,0,0,.25);
+
+    z-index:9999;
+
+    transition:.3s;
+}
+
+.wa-float:hover{
+
+    transform:scale(1.1);
+}
+
+/* ====================================
+   BACK TO TOP
+==================================== */
+
+.back-top{
+
+    position:fixed;
+
+    right:25px;
+    bottom:20px;
+
+    width:50px;
+    height:50px;
+
+    border-radius:50%;
+
+    background:#0284c7;
+
+    color:white;
+
+    display:flex;
+
+    justify-content:center;
+    align-items:center;
+
+    text-decoration:none;
+
+    font-size:24px;
+
+    box-shadow:
+    0 5px 15px rgba(0,0,0,.25);
+
+    z-index:9999;
+
+    transition:.3s;
+}
+
+.back-top:hover{
+
+    transform:translateY(-5px);
+}
+
+/* ====================================
+   ANIMASI MASUK
+==================================== */
+
+.card,
+.activity-card,
+.gallery-item,
+.contact-card,
+.stat-card{
+
+    animation:fadeUp .8s ease;
+}
+
+@keyframes fadeUp{
+
+    from{
+
+        opacity:0;
+        transform:translateY(30px);
+    }
+
+    to{
+
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+/* ====================================
+   RESPONSIVE TABLET
+==================================== */
+
+@media(max-width:992px){
+
+    .hero-text h1{
+
+        font-size:45px;
+    }
+
+    .section-title{
+
+        font-size:34px;
+    }
+}
+
+/* ====================================
+   RESPONSIVE HP
+==================================== */
+
+@media(max-width:768px){
+
+    .header{
+
+        flex-direction:column;
+
+        padding:15px;
+    }
+
+    .menu{
+
+        flex-wrap:wrap;
+
+        justify-content:center;
+
+        gap:12px;
+
+        margin-top:10px;
+    }
+
+    .hero-text h1{
+
+        font-size:32px;
+    }
+
+    .hero-text p{
+
+        font-size:16px;
+    }
+
+    .section-title{
+
+        font-size:28px;
+    }
+
+    .profil-img{
+
+        max-height:250px;
+    }
+
+    .contact-grid{
+
+        grid-template-columns:1fr;
+    }
+}
+
+/* ====================================
+   RESPONSIVE HP KECIL
+==================================== */
+
+@media(max-width:480px){
+
+    .hero-text h1{
+
+        font-size:26px;
+    }
+
+    .header-title{
+
+        font-size:18px;
+    }
+
+    .logo-img{
+
+        width:38px;
+        height:38px;
+    }
+
+    .card{
+
+        padding:20px;
+    }
+}
+
+/* ==========================
+   FLYER KONTAK
+========================== */
+
+.flyer-img{
+    width:250px;
+    max-width:100%;
+    height:auto;
+    display:block;
+    margin:20px auto;
+    border-radius:15px;
+    cursor:pointer;
+    box-shadow:0 10px 25px rgba(0,0,0,.15);
+    transition:.3s;
+}
+
+.flyer-img:hover{
+    transform:scale(1.05);
+}

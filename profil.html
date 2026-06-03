@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Profil Desa Tlogo</title>
+
+<link rel="stylesheet" href="style.css">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+<!-- ================= NAVBAR ================= -->
+
+<header class="header">
+
+    <div class="header-title">
+        DESA TLOGO
+    </div>
+
+    <div class="header-logos">
+        <img src="assets/logo-desa.jpg" class="logo-img">
+        <img src="assets/logo-klaten.jpg" class="logo-img">
+    </div>
+
+    <ul class="menu">
+        <li><a href="index.html">Beranda</a></li>
+        <li><a href="profil.html">Profil</a></li>
+        <li><a href="kegiatan.html">Kegiatan</a></li>
+        <li><a href="galeri.html">Galeri</a></li>
+        <li><a href="kontak.html">Kontak</a></li>
+    </ul>
+
+</header>
+
+<!-- ================= HERO PROFIL ================= -->
+
+<section class="page-hero">
+
+    <div class="page-overlay"></div>
+
+    <div class="page-content">
+
+        <h1>Profil Desa Tlogo</h1>
+
+        <p>
+            Mengenal lebih dekat Desa Tlogo,
+            Kecamatan Prambanan, Kabupaten Klaten.
+        </p>
+
+    </div>
+
+</section>
+
+<!-- ================= PROFIL ================= -->
+
+<section class="section">
+
+    <div class="profile-card">
+
+        <img src="assets/balai-desa.jpg"
+             class="profile-image"
+             onclick="openImage(this.src)"
+             alt="Balai Desa">
+
+        <div class="profile-content">
+
+            <h2>Tentang Desa Tlogo</h2>
+
+            <p>
+                Desa Tlogo merupakan salah satu desa yang berada di wilayah
+                Kecamatan Prambanan, Kabupaten Klaten, Provinsi Jawa Tengah.
+            </p>
+
+            <p>
+                Desa ini memiliki lingkungan yang asri,
+                masyarakat yang ramah, serta budaya gotong royong
+                yang masih terjaga dengan baik hingga saat ini.
+            </p>
+
+            <p>
+                Sebagian besar masyarakat bekerja di bidang pertanian,
+                perdagangan, jasa, dan usaha mikro kecil menengah (UMKM).
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ================= DATA DESA ================= -->
+
+<section class="section">
+
+    <h2 class="section-title">Data Singkat Desa</h2>
+
+    <div class="info-grid">
+
+        <div class="info-box">
+            <h3>Luas Wilayah</h3>
+            <p>± 350 Ha</p>
+        </div>
+
+        <div class="info-box">
+            <h3>Jumlah Penduduk</h3>
+            <p>3.500 Jiwa</p>
+        </div>
+
+        <div class="info-box">
+            <h3>Jumlah KK</h3>
+            <p>950 KK</p>
+        </div>
+
+        <div class="info-box">
+            <h3>Dusun</h3>
+            <p>4 Dusun</p>
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ================= VISI MISI ================= -->
+
+<section class="section">
+
+    <div class="visi-misi-grid">
+
+        <div class="visi-card">
+
+            <h2>Visi Desa</h2>
+
+            <p>
+                "Mewujudkan Desa Tlogo yang maju,
+                mandiri, sejahtera, dan berbudaya."
+            </p>
+
+        </div>
+
+        <div class="misi-card">
+
+            <h2>Misi Desa</h2>
+
+            <ul>
+
+                <li>Meningkatkan kualitas pelayanan masyarakat.</li>
+
+                <li>Mengembangkan potensi ekonomi desa.</li>
+
+                <li>Menjaga kerukunan dan kebersamaan warga.</li>
+
+                <li>Mendukung kegiatan sosial dan budaya.</li>
+
+                <li>Menciptakan lingkungan yang bersih dan sehat.</li>
+
+            </ul>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ================= LIGHTBOX ================= -->
+
+<div id="lightbox" class="lightbox" onclick="closeImage()">
+
+    <span class="close-btn">&times;</span>
+
+    <img id="lightbox-img" src="">
+
+</div>
+
+<!-- ================= FOOTER ================= -->
+
+<footer class="footer">
+
+    <h3>DESA TLOGO</h3>
+
+    <p>Kecamatan Prambanan, Kabupaten Klaten</p>
+
+    <p>© 2026 Desa Tlogo</p>
+
+</footer>
+
+<script>
+
+function openImage(src){
+
+    document.getElementById("lightbox").style.display="flex";
+
+    document.getElementById("lightbox-img").src=src;
+
+}
+
+function closeImage(){
+
+    document.getElementById("lightbox").style.display="none";
+
+}
+
+</script>
+
+</body>
+</html>
