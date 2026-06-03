@@ -1,55 +1,85 @@
-<!DOCTYPE html>
-<html lang="id">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!DOCTYPE html> <!-- Mendeklarasikan bahwa dokumen menggunakan HTML5 -->
 
-<title>Galeri Desa Tlogo</title>
+<html lang="id"> <!-- Bahasa utama website adalah Bahasa Indonesia -->
 
-<link rel="stylesheet" href="style.css">
+<head> <!-- Bagian head berisi konfigurasi website -->
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
+<meta charset="UTF-8"> <!-- Mendukung karakter huruf dan simbol UTF-8 -->
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Membuat website responsif di HP -->
+
+<title>Galeri Desa Tlogo</title> <!-- Judul yang muncul pada tab browser -->
+
+<link rel="stylesheet" href="style.css"> <!-- Menghubungkan file CSS -->
+
+<link rel="preconnect" href="https://fonts.googleapis.com"> <!-- Mempercepat koneksi ke Google Fonts -->
+
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<!-- Mengambil font Poppins dari Google Fonts -->
 
 </head>
 
-<body>
+<body> <!-- Awal isi website -->
 
 <!-- ================= NAVBAR ================= -->
 
-<header class="header">
+<header class="header"> <!-- Header website -->
 
     <div class="header-title">
-        DESA TLOGO
+        DESA TLOGO <!-- Nama website/desa -->
     </div>
 
-    <div class="header-logos">
-        <img src="assets/logo-desa.jpg" class="logo-img" alt="Logo Desa">
-        <img src="assets/logo-klaten.jpg" class="logo-img" alt="Logo Klaten">
+    <div class="header-logos"> <!-- Wadah logo -->
+
+        <img src="assets/logo-desa.jpg"
+             class="logo-img"
+             alt="Logo Desa"> <!-- Menampilkan logo desa -->
+
+        <img src="assets/logo-klaten.jpg"
+             class="logo-img"
+             alt="Logo Klaten"> <!-- Menampilkan logo Kabupaten Klaten -->
+
     </div>
 
-    <ul class="menu">
-        <li><a href="index.html">Beranda</a></li>
-        <li><a href="profil.html">Profil</a></li>
-        <li><a href="kegiatan.html">Kegiatan</a></li>
-        <li><a href="galeri.html">Galeri</a></li>
-        <li><a href="kontak.html">Kontak</a></li>
+    <ul class="menu"> <!-- Daftar menu navigasi -->
+
+        <li>
+            <a href="index.html">Beranda</a> <!-- Menu menuju halaman beranda -->
+        </li>
+
+        <li>
+            <a href="profil.html">Profil</a> <!-- Menu menuju halaman profil -->
+        </li>
+
+        <li>
+            <a href="kegiatan.html">Kegiatan</a> <!-- Menu menuju halaman kegiatan -->
+        </li>
+
+        <li>
+            <a href="galeri.html">Galeri</a> <!-- Menu menuju halaman galeri -->
+        </li>
+
+        <li>
+            <a href="kontak.html">Kontak</a> <!-- Menu menuju halaman kontak -->
+        </li>
+
     </ul>
 
 </header>
 
 <!-- ================= HERO ================= -->
 
-<section class="page-hero">
+<section class="page-hero"> <!-- Banner utama halaman -->
 
-    <div class="page-overlay"></div>
+    <div class="page-overlay"></div> <!-- Lapisan gelap transparan -->
 
-    <div class="page-content">
+    <div class="page-content"> <!-- Isi hero -->
 
-        <h1>Galeri Desa</h1>
+        <h1>Galeri Desa</h1> <!-- Judul utama halaman -->
 
         <p>
             Dokumentasi kegiatan dan suasana Desa Tlogo.
+            <!-- Deskripsi halaman -->
         </p>
 
     </div>
@@ -58,32 +88,43 @@
 
 <!-- ================= GALERI ================= -->
 
-<section class="section">
+<section class="section"> <!-- Bagian galeri -->
 
     <h2 class="section-title">
-        Dokumentasi Desa Tlogo
+        Dokumentasi Desa Tlogo <!-- Judul galeri -->
     </h2>
 
-    <div class="gallery-premium">
+    <div class="gallery-premium"> <!-- Container seluruh foto -->
 
-        <div class="gallery-item">
-            <img src="assets/galeri1.jpg" alt="Galeri 1" onclick="openImage(this.src)">
+        <div class="gallery-item"> <!-- Item foto pertama -->
+            <img src="assets/galeri1.jpg"
+                 alt="Galeri 1"
+                 onclick="openImage(this.src)">
+                 <!-- Saat diklik gambar akan diperbesar -->
         </div>
 
-        <div class="gallery-item">
-            <img src="assets/galeri2.jpg" alt="Galeri 2" onclick="openImage(this.src)">
+        <div class="gallery-item"> <!-- Item foto kedua -->
+            <img src="assets/galeri2.jpg"
+                 alt="Galeri 2"
+                 onclick="openImage(this.src)">
         </div>
 
-        <div class="gallery-item">
-            <img src="assets/galeri3.jpg" alt="Galeri 3" onclick="openImage(this.src)">
+        <div class="gallery-item"> <!-- Item foto ketiga -->
+            <img src="assets/galeri3.jpg"
+                 alt="Galeri 3"
+                 onclick="openImage(this.src)">
         </div>
 
-        <div class="gallery-item">
-            <img src="assets/galeri4.jpg" alt="Galeri 4" onclick="openImage(this.src)">
+        <div class="gallery-item"> <!-- Item foto keempat -->
+            <img src="assets/galeri4.jpg"
+                 alt="Galeri 4"
+                 onclick="openImage(this.src)">
         </div>
 
-        <div class="gallery-item">
-            <img src="assets/galeri5.jpg" alt="Galeri 5" onclick="openImage(this.src)">
+        <div class="gallery-item"> <!-- Item foto kelima -->
+            <img src="assets/galeri5.jpg"
+                 alt="Galeri 5"
+                 onclick="openImage(this.src)">
         </div>
 
     </div>
@@ -93,52 +134,68 @@
 <!-- ================= LIGHTBOX ================= -->
 
 <div id="lightbox" class="lightbox">
+<!-- Popup untuk menampilkan gambar ukuran besar -->
 
-    <span class="close-btn" onclick="closeImage()">&times;</span>
+    <span class="close-btn"
+          onclick="closeImage()">
+          &times;
+    </span>
+    <!-- Tombol tutup popup -->
 
-    <img id="lightbox-img" src="" alt="Preview">
+    <img id="lightbox-img"
+         src=""
+         alt="Preview">
+    <!-- Tempat menampilkan gambar yang diperbesar -->
 
 </div>
 
 <!-- ================= FOOTER ================= -->
 
-<footer class="footer">
+<footer class="footer"> <!-- Bagian bawah website -->
 
-    <h3>DESA TLOGO</h3>
+    <h3>DESA TLOGO</h3> <!-- Nama desa -->
 
     <p>
         Kecamatan Prambanan, Kabupaten Klaten
+        <!-- Lokasi desa -->
     </p>
 
     <p>
         © 2026 Desa Tlogo. All Rights Reserved.
+        <!-- Hak cipta website -->
     </p>
 
 </footer>
 
-<!-- ================= SCRIPT ================= -->
+<!-- ================= JAVASCRIPT ================= -->
 
 <script>
 
-function openImage(src){
+function openImage(src){ // Fungsi untuk membuka gambar
 
     document.getElementById("lightbox").style.display = "flex";
+    // Menampilkan popup lightbox
 
     document.getElementById("lightbox-img").src = src;
+    // Mengganti gambar preview sesuai gambar yang diklik
 
 }
 
-function closeImage(){
+function closeImage(){ // Fungsi untuk menutup gambar
 
     document.getElementById("lightbox").style.display = "none";
+    // Menyembunyikan popup lightbox
 
 }
 
 window.addEventListener("keydown", function(e){
+    // Mendeteksi tombol keyboard
 
     if(e.key === "Escape"){
+        // Jika tombol ESC ditekan
 
         closeImage();
+        // Menutup popup gambar
 
     }
 
@@ -146,5 +203,6 @@ window.addEventListener("keydown", function(e){
 
 </script>
 
-</body>
-</html>
+</body> <!-- Akhir isi website -->
+
+</html> <!-- Akhir dokumen HTML -->
