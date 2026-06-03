@@ -927,3 +927,51 @@ body{
 .flyer-img:hover{
     transform:scale(1.05);
 }
+
+/* ================= DOWNLOAD ================= */
+
+.download-buttons{
+    display:flex;
+    flex-direction:column;
+    gap:15px;
+    margin-top:20px;
+}
+
+.download-btn{
+    display:block;
+    text-decoration:none;
+    text-align:center;
+    padding:14px;
+    border-radius:10px;
+    font-weight:600;
+    color:white;
+    transition:0.3s;
+}
+
+.download-btn:hover{
+    transform:translateY(-3px);
+}
+
+.flyer-btn{
+    background:#2e7d32;
+}
+
+.flyer-btn:hover{
+    background:#1b5e20;
+}
+
+.pdf-btn{
+    background:#d32f2f;
+}
+
+.pdf-btn:hover{
+    background:#b71c1c;
+}
+
+.flyer-img{
+    width:100%;
+    border-radius:12px;
+    cursor:pointer;
+    margin-top:15px;
+    box-shadow:0 4px 10px rgba(0,0,0,0.2);
+}
