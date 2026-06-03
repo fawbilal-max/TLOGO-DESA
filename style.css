@@ -3,20 +3,20 @@
 ==================================== */
 
 *{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
+    margin:0;          /* Menghilangkan margin bawaan browser pada semua elemen */
+    padding:0;         /* Menghilangkan padding bawaan browser pada semua elemen */
+    box-sizing:border-box; /* Membuat perhitungan lebar/tinggi elemen menyertakan padding dan border */
 }
 
 html{
-    scroll-behavior:smooth;
+    scroll-behavior:smooth; /* Memberikan efek animasi gulir (scroll) yang halus saat navigasi diklik */
 }
 
 body{
-    font-family:'Poppins',sans-serif;
-    background:#f8fafc;
-    color:#1e293b;
-    overflow-x:hidden;
+    font-family:'Poppins',sans-serif; /* Mengatur jenis font utama menggunakan Poppins */
+    background:#f8fafc;               /* Mengatur warna latar belakang halaman (abu-abu sangat muda) */
+    color:#1e293b;                    /* Mengatur warna teks utama (biru gelap) */
+    overflow-x:hidden;                 /* Menyembunyikan konten yang meluber ke kanan agar tidak ada scrollbar horizontal */
 }
 
 /* ====================================
@@ -24,75 +24,68 @@ body{
 ==================================== */
 
 .header{
+    position:fixed;                 /* Membuat header tetap melayang di posisi atas saat di-scroll */
+    top:0;                          /* Menempelkan header tepat di batas atas layar */
+    left:0;                         /* Menempelkan header tepat di batas kiri layar */
 
-    position:fixed;
-    top:0;
-    left:0;
+    width:100%;                     /* Mengatur lebar header agar penuh seukuran layar */
 
-    width:100%;
+    display:flex;                   /* Mengaktifkan sistem layout Flexbox */
+    justify-content:space-between;  /* Memisahkan logo dan menu ke ujung kiri dan kanan */
+    align-items:center;             /* Mengatur posisi vertikal item di dalam header agar sejajar di tengah */
 
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
+    padding:15px 40px;              /* Memberikan jarak dalam: 15px (atas-bawah) dan 40px (kiri-kanan) */
 
-    padding:15px 40px;
+    background:#0f172af2;           /* Warna latar belakang header (biru sangat gelap dengan sedikit transparansi) */
 
-    background:rgba(15,23,42,.95);
+    backdrop-filter:blur(10px);     /* Memberikan efek buram/blur pada konten di belakang header */
 
-    backdrop-filter:blur(10px);
-
-    z-index:9999;
+    z-index:9999;                   /* Memastikan header selalu berada di lapisan paling atas dari elemen lain */
 }
 
 .header-title{
-
-    color:white;
-    font-size:24px;
-    font-weight:700;
-    letter-spacing:1px;
+    color:white;                    /* Mengatur warna teks judul header menjadi putih */
+    font-size:24px;                 /* Mengatur ukuran font judul sebesar 24 pixel */
+    font-weight:700;                /* Membuat teks judul menjadi tebal (bold) */
+    letter-spacing:1px;             /* Memberikan jarak antar huruf sebesar 1 pixel */
 }
 
 .header-logos{
-
-    display:flex;
-    align-items:center;
-    gap:10px;
+    display:flex;                   /* Menggunakan flexbox untuk menyusun logo di dalam header */
+    align-items:center;             /* Menyejajarkan logo secara vertikal di tengah */
+    gap:10px;                       /* Memberikan jarak antar elemen logo sebesar 10 pixel */
 }
 
 .logo-img{
+    width:50px;                    /* Mengatur lebar gambar logo sebesar 500 pixel */
+    height:50px;                    /* Mengatur tinggi gambar logo sebesar 50 pixel */
 
-    width:45px;
-    height:45px;
+    border-radius:20%;              /* Membuat sudut gambar logo melengkung sebesar 20% */
 
-    border-radius:50%;
+    object-fit:cover;               /* Memastikan gambar proporsional dan memotong area luar jika tidak muat */
 
-    object-fit:cover;
-
-    background:white;
-    padding:3px;
+    background:white;               /* Memberikan warna latar belakang putih di sekitar gambar */
+    padding:3px;                    /* Memberikan jarak dalam sebesar 3 pixel antara gambar dan border */
 }
 
 .menu{
+    display:flex;                   /* Menyusun daftar menu secara horizontal ke samping */
+    gap:25px;                       /* Memberikan jarak antar menu sebesar 25 pixel */
 
-    display:flex;
-    gap:25px;
-
-    list-style:none;
+    list-style:none;                /* Menghilangkan tanda titik (bullet) bawaan daftar list */
 }
 
 .menu a{
+    color:white;                    /* Mengatur warna teks tautan menu menjadi putih */
+    text-decoration:none;           /* Menghilangkan garis bawah pada teks tautan */
 
-    color:white;
-    text-decoration:none;
+    font-weight:500;                /* Mengatur ketebalan font teks menu */
 
-    font-weight:500;
-
-    transition:.3s;
+    transition:.3s;                 /* Memberikan durasi transisi 0.3 detik saat terjadi perubahan gaya */
 }
 
 .menu a:hover{
-
-    color:#38bdf8;
+    color:#38bdf8;                  /* Mengubah warna teks menu menjadi biru muda saat kursor diarahkan ke atasnya */
 }
 
 /* ====================================
@@ -100,72 +93,66 @@ body{
 ==================================== */
 
 .hero{
+    position:relative;              /* Menentukan basis posisi untuk elemen anak yang menggunakan absolute */
 
-    position:relative;
+    width:100%;                     /* Mengatur lebar area hero agar penuh 100% */
+    height:100vh;                   /* Mengatur tinggi area hero memenuhi 100% tinggi layar browser */
 
-    width:100%;
-    height:100vh;
-
-    overflow:hidden;
+    overflow:hidden;                /* Menyembunyikan bagian gambar hero yang melampaui batas area */
 }
 
 .hero-bg{
+    width:100%;                     /* Mengatur lebar gambar latar belakang hero sebesar 100% */
+    height:100%;                    /* Mengatur tinggi gambar latar belakang hero sebesar 100% */
 
-    width:100%;
-    height:100%;
-
-    object-fit:cover;
+    object-fit:cover;               /* Memastikan gambar latar belakang memenuhi area tanpa merusak proporsi */
 }
 
 .hero-overlay{
+    position:absolute;              /* Mengatur posisi lapisan gelap menimpa gambar latar belakang */
 
-    position:absolute;
+    top:0;                          /* Menempelkan lapisan dari batas atas hero */
+    left:0;                         /* Menempelkan lapisan dari batas kiri hero */
 
-    top:0;
-    left:0;
-
-    width:100%;
-    height:100%;
+    width:100%;                     /* Mengatur lebar lapisan agar menutupi seluruh hero */
+    height:100%;                    /* Mengatur tinggi lapisan agar menutupi seluruh hero */
 
     background:
     linear-gradient(
-        rgba(0,0,0,.55),
-        rgba(0,0,0,.65)
+        rgba(0,0,0,.55),            /* Efek gradasi warna hitam transparan atas (kegelapan 55%) */
+        rgba(0,0,0,.65)             /* Efek gradasi warna hitam transparan bawah (kegelapan 65%) */
     );
 }
 
 .hero-text{
+    position:absolute;              /* Mengatur posisi absolut untuk teks di atas lapisan hero */
 
-    position:absolute;
-
-    top:50%;
-    left:50%;
+    top:50%;                        /* Menempatkan titik atas teks di tengah area hero (50%) */
+    left:50%;                       /* Menempatkan titik kiri teks di tengah area hero (50%) */
 
     transform:
-    translate(-50%,-50%);
+    translate(-50%,-50%);           /* Menggeser teks kembali agar benar-benar presisi di tengah-tengah */
 
-    text-align:center;
+    text-align:center;              /* Mengatur rata tengah untuk baris teks di dalam hero */
 
-    color:white;
+    color:white;                    /* Mengubah warna seluruh teks di hero menjadi putih */
 
-    width:90%;
-    max-width:900px;
+    width:90%;                      /* Mengatur lebar fleksibel maksimal teks sebesar 90% pada layar kecil */
+    max-width:900px;                /* Membatasi lebar teks tidak akan lebih dari 900 pixel pada layar besar */
 }
 
 .hero-text h1{
-
-    font-size:60px;
-    margin-bottom:15px;
+    font-size:60px;                 /* Mengatur ukuran font judul utama hero sebesar 60 pixel */
+    margin-bottom:15px;             /* Memberikan jarak luar ke bawah dari judul sebesar 15 pixel */
 
     text-shadow:
-    0 5px 15px rgba(0,0,0,.3);
+    0 5px 15px rgba(0,0,0,.3);      /* Memberikan efek bayangan pada teks agar lebih mudah dibaca */
 }
 
 .hero-text p{
+    font-size:20px;                 /* Mengatur ukuran font paragraf deskripsi hero sebesar 20 pixel */
 
-    font-size:20px;
-
-    margin-bottom:25px;
+    margin-bottom:25px;             /* Memberikan jarak luar ke bawah dari paragraf sebesar 25 pixel */
 }
 
 /* ====================================
@@ -173,31 +160,29 @@ body{
 ==================================== */
 
 .btn{
+    display:inline-block;           /* Membuat tombol berkarakter seperti block tetapi bisa sejajar horizontal */
 
-    display:inline-block;
+    padding:14px 28px;              /* Memberikan jarak dalam tombol: 14px (atas-bawah) dan 28px (kiri-kanan) */
 
-    padding:14px 28px;
+    border-radius:50px;             /* Membuat bentuk tombol menjadi lonjong/kapsul */
 
-    border-radius:50px;
+    background:#38bdf8;             /* Mengatur warna latar belakang tombol (biru cerah) */
 
-    background:#38bdf8;
+    color:white;                    /* Mengatur warna teks di dalam tombol menjadi putih */
 
-    color:white;
+    text-decoration:none;           /* Menghilangkan garis bawah bawaan tag tautan pada tombol */
 
-    text-decoration:none;
+    font-weight:600;                /* Mengatur teks tombol menjadi agak tebal */
 
-    font-weight:600;
+    transition:.3s;                 /* Memberikan efek transisi halus berdurasi 0.3 detik */
 
-    transition:.3s;
-
-    margin:5px;
+    margin:5px;                     /* Memberikan jarak luar di sekeliling tombol sebesar 5 pixel */
 }
 
 .btn:hover{
+    transform:translateY(-4px);     /* Memberikan efek animasi tombol terangkat ke atas sejauh 4 pixel saat di-hover */
 
-    transform:translateY(-4px);
-
-    background:#0284c7;
+    background:#0284c7;             /* Mengubah warna latar belakang tombol menjadi biru yang lebih gelap saat di-hover */
 }
 
 /* ====================================
@@ -205,19 +190,17 @@ body{
 ==================================== */
 
 .section{
-
-    padding:90px 20px;
+    padding:90px 20px;              /* Jarak dalam section: 90px (jarak antar section) dan 20px (jarak aman kiri-kanan) */
 }
 
 .section-title{
+    text-align:center;              /* Mengatur teks judul section menjadi rata tengah */
 
-    text-align:center;
+    font-size:40px;                 /* Mengatur ukuran teks judul section sebesar 40 pixel */
 
-    font-size:40px;
+    margin-bottom:40px;             /* Memberikan jarak luar di bawah judul sebelum konten section dimulai */
 
-    margin-bottom:40px;
-
-    color:#0f172a;
+    color:#0f172a;                  /* Mengatur warna teks judul section menjadi biru gelap pekat */
 }
 
 /* ====================================
@@ -225,26 +208,24 @@ body{
 ==================================== */
 
 .card{
+    background:white;               /* Mengatur warna latar belakang kartu menjadi putih */
 
-    background:white;
+    max-width:1200px;               /* Membatasi lebar maksimal kartu sebesar 1200 pixel */
 
-    max-width:1200px;
+    margin:auto;                    /* Mengatur posisi kartu agar otomatis berada di tengah-tengah halaman */
 
-    margin:auto;
+    padding:35px;                   /* Memberikan jarak dalam konten di dalam kartu sebesar 35 pixel */
 
-    padding:35px;
-
-    border-radius:25px;
+    border-radius:25px;             /* Membuat sudut-sudut kartu melengkung halus sebesar 25 pixel */
 
     box-shadow:
-    0 10px 30px rgba(0,0,0,.08);
+    0 10px 30px rgba(0,0,0,.08);    /* Memberikan efek bayangan lembut di bawah kartu */
 
-    transition:.3s;
+    transition:.3s;                 /* Memberikan efek transisi berdurasi 0.3 detik untuk animasi hover */
 }
 
 .card:hover{
-
-    transform:translateY(-5px);
+    transform:translateY(-5px);     /* Menggeser kartu sedikit ke atas sejauh 5 pixel saat disorot kursor */
 }
 
 /* ====================================
@@ -252,56 +233,51 @@ body{
 ==================================== */
 
 .stats{
-
-    display:grid;
+    display:grid;                   /* Mengaktifkan sistem layout Grid */
 
     grid-template-columns:
-    repeat(auto-fit,minmax(220px,1fr));
+    repeat(auto-fit,minmax(220px,1fr)); /* Mengatur kolom responsif otomatis, minimal lebar kolom 220px */
 
-    gap:25px;
+    gap:25px;                       /* Mengatur jarak antar kartu statistik sebesar 25 pixel */
 
-    max-width:1200px;
+    max-width:1200px;               /* Mengatur lebar maksimal area statistik sebesar 1200 pixel */
 
-    margin:60px auto;
+    margin:60px auto;               /* Jarak luar: 60px (atas-bawah) dan otomatis ke tengah (kiri-kanan) */
 
-    padding:0 20px;
+    padding:0 20px;                 /* Memberikan jarak aman di dalam area kiri dan kanan sebesar 20 pixel */
 }
 
 .stat-card{
+    background:white;               /* Mengatur latar belakang kartu statistik menjadi putih */
 
-    background:white;
+    padding:35px;                   /* Memberikan jarak dalam kartu statistik sebesar 35 pixel */
 
-    padding:35px;
+    border-radius:20px;             /* Membuat sudut kartu statistik melengkung sebesar 20 pixel */
 
-    border-radius:20px;
-
-    text-align:center;
+    text-align:center;              /* Mengatur semua teks di dalam kartu statistik menjadi rata tengah */
 
     box-shadow:
-    0 10px 25px rgba(0,0,0,.08);
+    0 10px 25px rgba(0,0,0,.08);    /* Memberikan efek bayangan lembut pada kartu statistik */
 
-    transition:.3s;
+    transition:.3s;                 /* Memberikan efek transisi halus selama 0.3 detik */
 }
 
 .stat-card:hover{
-
-    transform:translateY(-8px);
+    transform:translateY(-8px);     /* Menggeser kartu statistik ke atas sejauh 8 pixel saat disorot kursor */
 }
 
 .stat-card h2{
+    font-size:42px;                 /* Mengatur ukuran angka statistik menjadi besar yaitu 42 pixel */
 
-    font-size:42px;
+    color:#0284c7;                  /* Mengubah warna angka statistik menjadi biru informasi */
 
-    color:#0284c7;
-
-    margin-bottom:10px;
+    margin-bottom:10px;             /* Memberikan jarak luar ke bawah dari angka sebesar 10 pixel */
 }
 
 .stat-card p{
+    color:#64748b;                  /* Mengatur warna teks keterangan statistik menjadi abu-abu medium */
 
-    color:#64748b;
-
-    font-size:16px;
+    font-size:16px;                 /* Mengatur ukuran font keterangan statistik sebesar 16 pixel */
 }
 
 /* ====================================
@@ -309,37 +285,34 @@ body{
 ==================================== */
 
 .welcome-card{
+    max-width:1000px;               /* Membatasi lebar maksimal kartu ucapan selamat datang sebesar 1000px */
 
-    max-width:1000px;
+    margin:auto;                    /* Mengatur posisi kartu agar berada di tengah-tengah area */
 
-    margin:auto;
+    background:white;               /* Mengatur latar belakang kartu menjadi putih */
 
-    background:white;
+    padding:40px;                   /* Memberikan jarak dalam ruang konten sebesar 40 pixel */
 
-    padding:40px;
+    border-radius:25px;             /* Melengkungkan sudut kartu selamat datang sebesar 25 pixel */
 
-    border-radius:25px;
-
-    text-align:center;
+    text-align:center;              /* Membuat teks di dalam kartu menjadi rata tengah */
 
     box-shadow:
-    0 10px 25px rgba(0,0,0,.08);
+    0 10px 25px rgba(0,0,0,.08);    /* Memberikan efek bayangan halus di sekeliling kartu */
 }
 
 .welcome-card h2{
+    margin-bottom:20px;             /* Memberikan margin luar ke bawah dari judul ucapan sebesar 20 pixel */
 
-    margin-bottom:20px;
-
-    color:#0f172a;
+    color:#0f172a;                  /* Mengatur warna judul ucapan menjadi biru gelap */
 }
 
 .welcome-card p{
+    color:#475569;                  /* Mengatur warna teks paragraf ucapan menjadi abu-abu gelap */
 
-    color:#475569;
+    line-height:1.9;                /* Mengatur jarak antar baris kalimat agar lebih renggang dan nyaman dibaca */
 
-    line-height:1.9;
-
-    margin-bottom:15px;
+    margin-bottom:15px;             /* Memberikan jarak luar di bawah setiap paragraf sebesar 15 pixel */
 }
 
 /* ====================================
@@ -347,39 +320,36 @@ body{
 ==================================== */
 
 .vision-box{
+    max-width:900px;                /* Mengatur lebar maksimal kotak visi sebesar 900 pixel */
 
-    max-width:900px;
+    margin:auto;                    /* Memposisikan kotak visi di tengah halaman secara horizontal */
 
-    margin:auto;
-
-    text-align:center;
+    text-align:center;              /* Membuat teks visi di dalam kotak menjadi rata tengah */
 
     background:
     linear-gradient(
         135deg,
         #0f172a,
         #1e293b
-    );
+    );                              /* Memberikan warna latar belakang gradasi miring dari biru tua ke abu-abu gelap */
 
-    color:white;
+    color:white;                    /* Mengubah warna teks di dalam kotak visi menjadi putih */
 
-    padding:50px;
+    padding:50px;                   /* Memberikan jarak dalam yang luas sebesar 50 pixel di dalam kotak */
 
-    border-radius:25px;
+    border-radius:25px;             /* Melengkungkan sudut kotak visi sebesar 25 pixel */
 }
 
 .vision-box h2{
+    margin-bottom:20px;             /* Memberikan jarak luar ke bawah dari judul visi sebesar 20 pixel */
 
-    margin-bottom:20px;
-
-    font-size:32px;
+    font-size:32px;                 /* Mengatur ukuran teks judul visi sebesar 32 pixel */
 }
 
 .vision-box p{
+    font-size:20px;                 /* Mengatur ukuran teks isi visi menjadi 20 pixel */
 
-    font-size:20px;
-
-    line-height:1.8;
+    line-height:1.8;                /* Mengatur kerapatan antar baris kalimat visi menjadi 1.8 */
 }
 
 /* ====================================
@@ -387,60 +357,54 @@ body{
 ==================================== */
 
 .profil-card{
-
-    text-align:center;
+    text-align:center;              /* Mengatur teks dan elemen di dalam kartu profil menjadi rata tengah */
 }
 
 .profil-img{
+    width:100%;                     /* Mengatur lebar gambar profil agar fleksibel 100% dari ruangnya */
 
-    width:100%;
+    max-height:450px;               /* Membatasi tinggi maksimal gambar profil tidak lebih dari 450 pixel */
 
-    max-height:450px;
+    object-fit:cover;               /* Memotong gambar secara proporsional jika dimensinya tidak pas */
 
-    object-fit:cover;
+    border-radius:20px;             /* Melengkungkan sudut gambar profil sebesar 20 pixel */
 
-    border-radius:20px;
-
-    cursor:pointer;
+    cursor:pointer;                 /* Mengubah bentuk kursor menjadi tangan (pointer) saat berada di atas gambar */
 
     box-shadow:
-    0 10px 25px rgba(0,0,0,.15);
+    0 10px 25px rgba(0,0,0,.15);    /* Memberikan bayangan yang sedikit lebih tegas di bawah gambar profil */
 
-    transition:.4s;
+    transition:.4s;                 /* Memberikan durasi transisi 0.4 detik saat di-hover */
 }
 
 .profil-img:hover{
-
-    transform:scale(1.02);
+    transform:scale(1.02);          /* Memberikan efek memperbesar gambar sedikit (1.02 kali) saat disorot kursor */
 }
 
 .box-visi{
+    background:#0f172a;             /* Mengatur latar belakang kotak teks visi di profil menjadi biru gelap pekat */
 
-    background:#0f172a;
+    color:white;                    /* Mengubah warna teks di dalam kotak visi profil menjadi putih */
 
-    color:white;
+    padding:25px;                   /* Memberikan jarak dalam kotak sebesar 25 pixel */
 
-    padding:25px;
+    border-radius:15px;             /* Melengkungkan sudut kotak visi profil sebesar 15 pixel */
 
-    border-radius:15px;
-
-    margin:25px 0;
+    margin:25px 0;                  /* Memberikan jarak luar: 25px (atas-bawah) dan 0 (kiri-kanan) */
 }
 
 .misi-list{
+    text-align:left;                /* Mengatur teks daftar misi menjadi rata kiri agar rapi */
 
-    text-align:left;
+    max-width:800px;                /* Membatasi lebar maksimal area daftar misi sebesar 800 pixel */
 
-    max-width:800px;
+    margin:auto;                    /* Memposisikan daftar misi di tengah secara horizontal */
 
-    margin:auto;
-
-    padding-left:25px;
+    padding-left:25px;              /* Memberikan jarak dalam di sebelah kiri untuk ruang nomor/bullet list */
 }
 
 .misi-list li{
-
-    margin-bottom:12px;
+    margin-bottom:12px;             /* Memberikan jarak luar antar poin misi ke bawah sebesar 12 pixel */
 }
 
 /* ====================================
@@ -448,39 +412,35 @@ body{
 ==================================== */
 
 .contact-grid{
-
-    display:grid;
+    display:grid;                   /* Mengaktifkan sistem layout Grid pada area kontak */
 
     grid-template-columns:
-    repeat(2,1fr);
+    repeat(2,1fr);                  /* Membagi area kontak menjadi 2 kolom yang sama besar */
 
-    gap:30px;
+    gap:30px;                       /* Memberikan jarak pemisah antar kolom kontak sebesar 30 pixel */
 }
 
 .contact-card{
+    background:white;               /* Mengatur latar belakang kartu kontak menjadi putih */
 
-    background:white;
+    padding:30px;                   /* Memberikan jarak dalam kartu kontak sebesar 30 pixel */
 
-    padding:30px;
-
-    border-radius:20px;
+    border-radius:20px;             /* Melengkungkan sudut kartu kontak sebesar 20 pixel */
 
     box-shadow:
-    0 10px 25px rgba(0,0,0,.08);
+    0 10px 25px rgba(0,0,0,.08);    /* Memberikan efek bayangan lembut di sekeliling kartu kontak */
 }
 
 .contact-card h3{
+    margin-bottom:15px;             /* Memberikan jarak luar ke bawah dari judul kartu kontak sebesar 15px */
 
-    margin-bottom:15px;
-
-    color:#0f172a;
+    color:#0f172a;                  /* Mengatur warna judul kartu kontak menjadi biru gelap */
 }
 
 .contact-card p{
+    margin-bottom:10px;             /* Memberikan jarak luar ke bawah dari paragraf informasi sebesar 10px */
 
-    margin-bottom:10px;
-
-    color:#475569;
+    color:#475569;                  /* Mengatur warna teks informasi kontak menjadi abu-abu tua */
 }
 
 /* ====================================
@@ -488,67 +448,59 @@ body{
 ==================================== */
 
 .activity-grid{
-
-    display:grid;
+    display:grid;                   /* Mengaktifkan sistem layout Grid pada bagian kegiatan */
 
     grid-template-columns:
-    repeat(auto-fit,minmax(320px,1fr));
+    repeat(auto-fit,minmax(320px,1fr)); /* Mengatur kolom kegiatan responsif otomatis, minimal lebar 320px */
 
-    gap:25px;
+    gap:25px;                       /* Mengatur jarak antar kartu kegiatan sebesar 25 pixel */
 }
 
 .activity-card{
+    background:white;               /* Mengatur latar belakang kartu kegiatan menjadi putih */
 
-    background:white;
+    border-radius:20px;             /* Melengkungkan sudut kartu kegiatan sebesar 20 pixel */
 
-    border-radius:20px;
-
-    overflow:hidden;
+    overflow:hidden;                /* Memastikan gambar/konten yang keluar dari lengkungan sudut akan terpotong */
 
     box-shadow:
-    0 10px 25px rgba(0,0,0,.08);
+    0 10px 25px rgba(0,0,0,.08);    /* Memberikan efek bayangan lembut pada kartu kegiatan */
 
-    transition:.4s;
+    transition:.4s;                 /* Mengatur durasi animasi transisi selama 0.4 detik */
 }
 
 .activity-card:hover{
-
-    transform:translateY(-10px);
+    transform:translateY(-10px);    /* Menggeser kartu kegiatan ke atas sejauh 10 pixel saat disorot kursor */
 }
 
 .activity-card img{
+    width:100%;                     /* Mengatur lebar gambar kegiatan penuh 100% mengikuti kartu */
 
-    width:100%;
+    height:240px;                   /* Mengunci tinggi gambar kegiatan sebesar 240 pixel */
 
-    height:240px;
+    object-fit:cover;               /* Menjaga proporsi gambar kegiatan agar tidak terlihat gepeng */
 
-    object-fit:cover;
+    cursor:pointer;                 /* Mengubah ikon kursor menjadi bentuk tangan saat berada di atas gambar */
 
-    cursor:pointer;
-
-    transition:.4s;
+    transition:.4s;                 /* Mengatur durasi transisi efek gambar selama 0.4 detik */
 }
 
 .activity-card:hover img{
-
-    transform:scale(1.05);
+    transform:scale(1.05);          /* Memperbesar gambar kegiatan di dalam kartu sebesar 1.05 kali saat di-hover */
 }
 
 .activity-content{
-
-    padding:25px;
+    padding:25px;                   /* Memberikan jarak dalam untuk teks konten kegiatan sebesar 25 pixel */
 }
 
 .activity-content h3{
+    margin-bottom:10px;             /* Memberikan jarak luar ke bawah dari judul kegiatan sebesar 10 pixel */
 
-    margin-bottom:10px;
-
-    color:#0f172a;
+    color:#0f172a;                  /* Mengatur warna teks judul kegiatan menjadi biru gelap */
 }
 
 .activity-content p{
-
-    color:#64748b;
+    color:#64748b;                  /* Mengatur warna teks deskripsi kegiatan menjadi abu-abu medium */
 }
 
 /* ====================================
@@ -556,43 +508,39 @@ body{
 ==================================== */
 
 .gallery-premium{
-
-    display:grid;
+    display:grid;                   /* Mengaktifkan sistem layout Grid pada galeri */
 
     grid-template-columns:
-    repeat(auto-fit,minmax(250px,1fr));
+    repeat(auto-fit,minmax(250px,1fr)); /* Membuat grid gambar responsif otomatis, minimal lebar kolom 250px */
 
-    gap:20px;
+    gap:20px;                       /* Memberikan jarak pemisah antar item galeri sebesar 20 pixel */
 }
 
 .gallery-item{
+    overflow:hidden;                /* Memotong area gambar yang meluap dari batas sudut melengkung */
 
-    overflow:hidden;
-
-    border-radius:20px;
+    border-radius:20px;             /* Melengkungkan sudut bingkai foto galeri sebesar 20 pixel */
 
     box-shadow:
-    0 10px 25px rgba(0,0,0,.08);
+    0 10px 25px rgba(0,0,0,.08);    /* Memberikan efek bayangan tipis pada setiap item foto galeri */
 }
 
 .gallery-item img{
+    width:100%;                     /* Mengatur lebar gambar galeri penuh 100% */
 
-    width:100%;
+    height:250px;                   /* Mengunci tinggi semua gambar galeri sama rata yaitu 250 pixel */
 
-    height:250px;
+    object-fit:cover;               /* Menyesuaikan gambar agar pas di dalam ruang kotak tanpa merusak rasio */
 
-    object-fit:cover;
+    cursor:pointer;                 /* Mengubah bentuk kursor menjadi tangan penunjuk di atas gambar */
 
-    cursor:pointer;
-
-    transition:.5s;
+    transition:.5s;                 /* Mengatur transisi animasi gambar galeri yang halus selama 0.5 detik */
 }
 
 .gallery-item:hover img{
+    transform:scale(1.12);          /* Zoom-in atau memperbesar gambar galeri sebesar 1.12 kali saat di-hover */
 
-    transform:scale(1.12);
-
-    filter:brightness(1.1);
+    filter:brightness(1.1);         /* Meningkatkan kecerahan gambar sebesar 10% saat kursor menyorot gambar */
 }
 
 /* ====================================
@@ -600,55 +548,51 @@ body{
 ==================================== */
 
 .lightbox{
+    display:none;                   /* Menyembunyikan elemen lightbox secara default saat halaman dimuat */
 
-    display:none;
+    position:fixed;                 /* Membuat posisi layar hitam pop-up mengunci layar penuh */
 
-    position:fixed;
+    top:0;                          /* Menempelkan sudut atas lightbox di batas paling atas layar */
+    left:0;                         /* Menempelkan sudut kiri lightbox di batas paling kiri layar */
 
-    top:0;
-    left:0;
+    width:100%;                     /* Mengatur lebar pop-up menutupi seluruh lebar layar */
+    height:100%;                    /* Mengatur tinggi pop-up menutupi seluruh tinggi layar */
 
-    width:100%;
-    height:100%;
+    background:rgba(0,0,0,.95);     /* Latar belakang pop-up menggunakan warna hitam dengan kepekatan 95% */
 
-    background:rgba(0,0,0,.95);
+    justify-content:center;         /* Menyelaraskan konten gambar secara horizontal pas di tengah layar */
+    align-items:center;             /* Menyelaraskan konten gambar secara vertikal pas di tengah layar */
 
-    justify-content:center;
-    align-items:center;
-
-    z-index:999999;
+    z-index:999999;                 /* Memberikan nilai layer super tinggi agar berada di atas komponen apa pun */
 }
 
 .lightbox img{
+    max-width:95%;                  /* Membatasi lebar gambar di dalam pop-up maksimal 95% dari lebar layar */
+    max-height:90%;                 /* Membatasi tinggi gambar di dalam pop-up maksimal 90% dari tinggi layar */
 
-    max-width:95%;
-    max-height:90%;
-
-    border-radius:15px;
+    border-radius:15px;             /* Melengkungkan sudut gambar di dalam lightbox sebesar 15 pixel */
 
     box-shadow:
-    0 0 25px rgba(255,255,255,.15);
+    0 0 25px rgba(255,255,255,.15); /* Memberikan efek pendaran cahaya putih transparan di belakang gambar */
 }
 
 .close-btn{
+    position:absolute;              /* Mengatur posisi tombol tutup (X) secara absolut di dalam area pop-up */
 
-    position:absolute;
+    top:20px;                       /* Jarak tombol close dari batas atas layar sebesar 20 pixel */
+    right:35px;                     /* Jarak tombol close dari batas kanan layar sebesar 35 pixel */
 
-    top:20px;
-    right:35px;
+    color:white;                    /* Mengubah warna simbol tombol close menjadi putih */
 
-    color:white;
+    font-size:55px;                 /* Mengatur ukuran simbol teks tombol close menjadi sangat besar (55px) */
 
-    font-size:55px;
+    cursor:pointer;                 /* Mengubah ikon kursor menjadi jari penunjuk saat berada di atas tombol */
 
-    cursor:pointer;
-
-    transition:.3s;
+    transition:.3s;                 /* Transisi kelembutan warna saat di-hover selama 0.3 detik */
 }
 
 .close-btn:hover{
-
-    color:#38bdf8;
+    color:#38bdf8;                  /* Mengubah warna tombol close menjadi biru muda saat disorot */
 }
 
 /* ====================================
@@ -656,13 +600,12 @@ body{
 ==================================== */
 
 .maps-container{
+    overflow:hidden;                /* Memotong sudut peta (iframe) agar mengikuti lengkungan border-radius */
 
-    overflow:hidden;
-
-    border-radius:20px;
+    border-radius:20px;             /* Melengkungkan sudut bingkai peta Google Maps sebesar 20 pixel */
 
     box-shadow:
-    0 10px 25px rgba(0,0,0,.08);
+    0 10px 25px rgba(0,0,0,.08);    /* Memberikan efek bayangan lembut pada container peta */
 }
 
 /* ====================================
@@ -670,35 +613,32 @@ body{
 ==================================== */
 
 .footer{
-
     background:
     linear-gradient(
         135deg,
         #0f172a,
         #1e293b
-    );
+    );                              /* Warna latar belakang gradasi miring dari biru gelap ke abu-abu gelap */
 
-    color:white;
+    color:white;                    /* Mengatur warna seluruh teks di dalam footer menjadi putih */
 
-    text-align:center;
+    text-align:center;              /* Mengatur semua teks di footer menjadi rata tengah */
 
-    padding:60px 20px;
+    padding:60px 20px;              /* Jarak dalam ruang footer: 60px (atas-bawah) dan 20px (kiri-kanan) */
 
-    margin-top:60px;
+    margin-top:60px;                /* Memberikan jarak pemisah dari konten di atasnya sebesar 60 pixel */
 }
 
 .footer h3{
+    font-size:28px;                 /* Mengatur ukuran font judul footer sebesar 28 pixel */
 
-    font-size:28px;
-
-    margin-bottom:10px;
+    margin-bottom:10px;             /* Memberikan margin luar ke bawah dari judul footer sebesar 10 pixel */
 }
 
 .footer p{
+    opacity:.9;                     /* Membuat teks paragraf footer sedikit agak transparan (tingkat kejelasan 90%) */
 
-    opacity:.9;
-
-    margin-top:8px;
+    margin-top:8px;                 /* Memberikan margin luar ke atas dari elemen teks paragraf sebesar 8 pixel */
 }
 
 /* ====================================
@@ -706,41 +646,39 @@ body{
 ==================================== */
 
 .wa-float{
+    position:fixed;                 /* Membuat tombol WhatsApp melayang konstan saat halaman di-scroll */
 
-    position:fixed;
+    right:25px;                     /* Menempatkan posisi tombol berjarak 25 pixel dari batas kanan layar */
+    bottom:90px;                    /* Menempatkan posisi tombol berjarak 90 pixel dari batas bawah layar */
 
-    right:25px;
-    bottom:90px;
+    width:60px;                     /* Mengatur lebar lingkaran tombol WhatsApp sebesar 60 pixel */
+    height:60px;                    /* Mengatur tinggi lingkaran tombol WhatsApp sebesar 60 pixel */
 
-    width:60px;
-    height:60px;
+    border-radius:50%;              /* Membuat bentuk tombol menjadi bulat sempurna */
 
-    border-radius:50%;
+    background:#25D366;             /* Mengatur warna latar belakang tombol hijau khas WhatsApp */
 
-    background:#25D366;
+    color:white;                    /* Mengubah warna ikon/teks di dalam tombol menjadi putih */
 
-    color:white;
+    display:flex;                   /* Mengaktifkan flexbox pada tombol */
 
-    display:flex;
+    justify-content:center;         /* Memposisikan ikon di tengah secara horizontal */
+    align-items:center;             /* Memposisikan ikon di tengah secara vertikal */
 
-    justify-content:center;
-    align-items:center;
+    text-decoration:none;           /* Menghilangkan garis bawah bawaan tag tautan */
 
-    text-decoration:none;
-
-    font-size:28px;
+    font-size:28px;                 /* Mengatur ukuran font ikon di dalam tombol menjadi 28 pixel */
 
     box-shadow:
-    0 5px 15px rgba(0,0,0,.25);
+    0 5px 15px rgba(0,0,0,.25);     /* Memberikan efek bayangan nyata di bawah tombol WhatsApp */
 
-    z-index:9999;
+    z-index:9999;                   /* Menjaga agar tombol WA selalu terlihat di atas konten reguler halaman */
 
-    transition:.3s;
+    transition:.3s;                 /* Mengatur durasi animasi kelembutan efek hover selama 0.3 detik */
 }
 
 .wa-float:hover{
-
-    transform:scale(1.1);
+    transform:scale(1.1);           /* Memberikan efek sedikit membesar (1.1 kali) ketika disorot kursor */
 }
 
 /* ====================================
@@ -748,41 +686,39 @@ body{
 ==================================== */
 
 .back-top{
+    position:fixed;                 /* Membuat tombol kembali ke atas melayang menetap di layar */
 
-    position:fixed;
+    right:25px;                     /* Menempatkan posisi tombol berjarak 25 pixel dari batas kanan layar */
+    bottom:20px;                    /* Menempatkan posisi tombol berjarak 20 pixel dari batas bawah layar */
 
-    right:25px;
-    bottom:20px;
+    width:50px;                     /* Mengatur lebar lingkaran tombol sebesar 50 pixel */
+    height:50px;                    /* Mengatur tinggi lingkaran tombol sebesar 50 pixel */
 
-    width:50px;
-    height:50px;
+    border-radius:50%;              /* Membuat bentuk tombol menjadi lingkaran sempurna */
 
-    border-radius:50%;
+    background:#0284c7;             /* Mengatur warna latar belakang tombol menjadi biru informasi */
 
-    background:#0284c7;
+    color:white;                    /* Mengatur warna teks/ikon panah di dalam tombol menjadi putih */
 
-    color:white;
+    display:flex;                   /* Menggunakan sistem flexbox di dalam lingkaran tombol */
 
-    display:flex;
+    justify-content:center;         /* Menempatkan posisi ikon tepat di tengah horizontal */
+    align-items:center;             /* Menempatkan posisi ikon tepat di tengah vertikal */
 
-    justify-content:center;
-    align-items:center;
+    text-decoration:none;           /* Menghilangkan garis bawah tautan pada tombol */
 
-    text-decoration:none;
-
-    font-size:24px;
+    font-size:24px;                 /* Mengatur ukuran font ikon panah sebesar 24 pixel */
 
     box-shadow:
-    0 5px 15px rgba(0,0,0,.25);
+    0 5px 15px rgba(0,0,0,.25);     /* Memberikan efek bayangan nyata di bawah tombol back to top */
 
-    z-index:9999;
+    z-index:9999;                   /* Memastikan tombol berada di lapisan atas menimpa konten halaman */
 
-    transition:.3s;
+    transition:.3s;                 /* Mengatur durasi transisi kelembutan efek hover selama 0.3 detik */
 }
 
 .back-top:hover{
-
-    transform:translateY(-5px);
+    transform:translateY(-5px);     /* Memberikan efek animasi melompat ke atas sejauh 5 pixel saat di-hover */
 }
 
 /* ====================================
@@ -794,22 +730,18 @@ body{
 .gallery-item,
 .contact-card,
 .stat-card{
-
-    animation:fadeUp .8s ease;
+    animation:fadeUp .8s ease;      /* Menerapkan efek animasi masuk "fadeUp" selama 0.8 detik pada kelas-kelas tersebut */
 }
 
 @keyframes fadeUp{
-
     from{
-
-        opacity:0;
-        transform:translateY(30px);
+        opacity:0;                  /* Kondisi awal animasi: elemen transparan tidak terlihat (0) */
+        transform:translateY(30px); /* Kondisi awal animasi: posisi elemen bergeser ke bawah sejauh 30 pixel */
     }
 
     to{
-
-        opacity:1;
-        transform:translateY(0);
+        opacity:1;                  /* Kondisi akhir animasi: elemen muncul sempurna dengan kejelasan penuh (1) */
+        transform:translateY(0);    /* Kondisi akhir animasi: elemen kembali ke posisi asli normalnya */
     }
 }
 
@@ -817,16 +749,14 @@ body{
    RESPONSIVE TABLET
 ==================================== */
 
-@media(max-width:992px){
+@media(max-width:992px){            /* Aturan gaya khusus untuk perangkat dengan lebar layar maksimal 992px (Tablet) */
 
     .hero-text h1{
-
-        font-size:45px;
+        font-size:45px;             /* Memperkecil ukuran font judul hero menjadi 45px agar pas di layar tablet */
     }
 
     .section-title{
-
-        font-size:34px;
+        font-size:34px;             /* Memperkecil ukuran judul section menjadi 34px di layar tablet */
     }
 }
 
@@ -834,49 +764,42 @@ body{
    RESPONSIVE HP
 ==================================== */
 
-@media(max-width:768px){
+@media(max-width:768px){            /* Aturan gaya khusus untuk perangkat dengan lebar layar maksimal 768px (Handphone) */
 
     .header{
+        flex-direction:column;      /* Mengubah susunan isi header dari kesamping menjadi berderet ke bawah */
 
-        flex-direction:column;
-
-        padding:15px;
+        padding:15px;               /* Mengurangi ukuran jarak dalam header menjadi 15 pixel di layar HP */
     }
 
     .menu{
+        flex-wrap:wrap;             /* Memperbolehkan menu navigasi turun ke baris baru jika ruang tidak cukup */
 
-        flex-wrap:wrap;
+        justify-content:center;     /* Memposisikan susunan menu berada di tengah-tengah secara horizontal */
 
-        justify-content:center;
+        gap:12px;                   /* Memperkecil jarak antar menu tautan menjadi 12 pixel */
 
-        gap:12px;
-
-        margin-top:10px;
+        margin-top:10px;            /* Memberikan jarak luar ke atas dari menu sebesar 10 pixel */
     }
 
     .hero-text h1{
-
-        font-size:32px;
+        font-size:32px;             /* Mengecilkan ukuran judul utama di hero menjadi 32px agar tidak terpotong */
     }
 
     .hero-text p{
-
-        font-size:16px;
+        font-size:16px;             /* Mengecilkan ukuran deskripsi teks hero menjadi 16px di layar HP */
     }
 
     .section-title{
-
-        font-size:28px;
+        font-size:28px;             /* Mengecilkan ukuran judul section menjadi 28px di layar HP */
     }
 
     .profil-img{
-
-        max-height:250px;
+        max-height:250px;           /* Membatasi tinggi maksimal gambar profil diturunkan menjadi 250px */
     }
 
     .contact-grid{
-
-        grid-template-columns:1fr;
+        grid-template-columns:1fr;  /* Mengubah kolom grid kontak yang tadinya 2 kolom menjadi hanya 1 kolom penuh */
     }
 }
 
@@ -884,27 +807,23 @@ body{
    RESPONSIVE HP KECIL
 ==================================== */
 
-@media(max-width:480px){
+@media(max-width:480px){            /* Aturan gaya khusus untuk perangkat layar sangat kecil dengan lebar maksimal 480px */
 
     .hero-text h1{
-
-        font-size:26px;
+        font-size:26px;             /* Mengecilkan font judul hero menjadi 26px agar muat di HP kecil */
     }
 
     .header-title{
-
-        font-size:18px;
+        font-size:18px;             /* Mengecilkan font teks judul di header menjadi 18px */
     }
 
     .logo-img{
-
-        width:38px;
-        height:38px;
+        width:38px;                 /* Mengecilkan ukuran lebar kotak logo gambar menjadi 38px */
+        height:38px;                /* Mengecilkan ukuran tinggi kotak logo gambar menjadi 38px */
     }
 
     .card{
-
-        padding:20px;
+        padding:20px;               /* Mengurangi ukuran jarak dalam kartu menjadi lebih sempit (20px) agar hemat ruang */
     }
 }
 
@@ -913,65 +832,65 @@ body{
 ========================== */
 
 .flyer-img{
-    width:250px;
-    max-width:100%;
-    height:auto;
-    display:block;
-    margin:20px auto;
-    border-radius:15px;
-    cursor:pointer;
-    box-shadow:0 10px 25px rgba(0,0,0,.15);
-    transition:.3s;
+    width:250px;                    /* Mengatur lebar default gambar flyer kontak sebesar 250 pixel */
+    max-width:100%;                 /* Membatasi agar lebar gambar tidak melebihi container pembungkusnya */
+    height:auto;                    /* Mengatur tinggi gambar otomatis proporsional menyesuaikan lebar */
+    display:block;                  /* Mengubah tipe elemen gambar menjadi block agar bisa diatur margin tengah */
+    margin:20px auto;               /* Jarak luar: 20px (atas-bawah) dan otomatis ke tengah (kiri-kanan) */
+    border-radius:15px;             /* Melengkungkan sudut-sudut gambar flyer sebesar 15 pixel */
+    cursor:pointer;                 /* Mengubah jenis kursor menjadi penunjuk tangan saat berada di atas flyer */
+    box-shadow:0 10px 25px rgba(0,0,0,.15); /* Memberikan efek bayangan nyata di sekeliling gambar flyer */
+    transition:.3s;                 /* Mengatur durasi kelembutan animasi transisi selama 0.3 detik */
 }
 
 .flyer-img:hover{
-    transform:scale(1.05);
+    transform:scale(1.05);          /* Memperbesar sedikit ukuran flyer (1.05 kali) saat didekati kursor */
 }
 
 /* ================= DOWNLOAD ================= */
 
 .download-buttons{
-    display:flex;
-    flex-direction:column;
-    gap:15px;
-    margin-top:20px;
+    display:flex;                   /* Mengaktifkan layout Flexbox pada area pembungkus tombol unduh */
+    flex-direction:column;          /* Mengatur arah susunan tombol unduh berderet vertikal ke bawah */
+    gap:15px;                       /* Memberikan jarak pemisah antar tombol unduh sebesar 15 pixel */
+    margin-top:20px;                /* Memberikan jarak luar ke atas sebelum baris tombol dimulai sebesar 20px */
 }
 
 .download-btn{
-    display:block;
-    text-decoration:none;
-    text-align:center;
-    padding:14px;
-    border-radius:10px;
-    font-weight:600;
-    color:white;
-    transition:0.3s;
+    display:block;                  /* Mengubah tombol menjadi tipe block agar memenuhi lebar area */
+    text-decoration:none;           /* Menghilangkan garis bawah default bawaan tautan text */
+    text-align:center;              /* Mengatur posisi teks di dalam tombol menjadi rata tengah */
+    padding:14px;                   /* Memberikan jarak dalam ruang tombol sebesar 14 pixel */
+    border-radius:10px;             /* Melengkungkan sudut-sudut kotak tombol unduh sebesar 10 pixel */
+    font-weight:600;                /* Mengatur teks di dalam tombol unduh menjadi tebal */
+    color:white;                    /* Mengatur warna tulisan di dalam tombol menjadi putih */
+    transition:0.3s;                /* Mengatur durasi transisi kelembutan efek selama 0.3 detik */
 }
 
 .download-btn:hover{
-    transform:translateY(-3px);
+    transform:translateY(-3px);     /* Menggeser tombol unduh ke atas sejauh 3 pixel saat disorot kursor */
 }
 
 .flyer-btn{
-    background:#2e7d32;
+    background:#2e7d32;             /* Mengatur warna latar belakang tombol flyer menjadi hijau gelap sukses */
 }
 
 .flyer-btn:hover{
-    background:#1b5e20;
+    background:#1b5e20;             /* Mengubah warna tombol flyer menjadi hijau yang lebih tua saat di-hover */
 }
 
 .pdf-btn{
-    background:#d32f2f;
+    background:#d32f2f;             /* Mengatur warna latar belakang tombol dokumen PDF menjadi merah khas dokumen */
 }
 
 .pdf-btn:hover{
-    background:#b71c1c;
+    background:#b71c1c;             /* Mengubah warna latar belakang tombol PDF menjadi merah gelap saat di-hover */
 }
 
 .flyer-img{
-    width:100%;
-    border-radius:12px;
-    cursor:pointer;
-    margin-top:15px;
-    box-shadow:0 4px 10px rgba(0,0,0,0.2);
+    width:100%;                     /* Timpaan selektor: Mengatur ulang lebar flyer kontak menjadi penuh 100% */
+    border-radius:12px;             /* Timpaan selektor: Mengatur ulang sudut lengkungan flyer menjadi 12 pixel */
+    cursor:pointer;                 /* Timpaan selektor: Memastikan kursor tetap berbentuk tangan penunjuk */
+    margin-top:15px;                /* Timpaan selektor: Memberikan jarak luar atas khusus sebesar 15 pixel */
+    box-shadow:0 4px 10px rgba(0,0,0,0.2); /* Timpaan selektor: Mengubah bayangan flyer menjadi sedikit lebih tegas */
 }
