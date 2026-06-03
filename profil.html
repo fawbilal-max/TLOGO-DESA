@@ -1,39 +1,61 @@
-<!DOCTYPE html>
-<html lang="id">
-<head>
-<meta charset="UTF-8">
+<!DOCTYPE html> <!-- Mendeklarasikan dokumen HTML5 -->
+
+<html lang="id"> <!-- Bahasa utama website Indonesia -->
+
+<head> <!-- Bagian pengaturan website -->
+
+<meta charset="UTF-8"> <!-- Mendukung karakter huruf Indonesia -->
+
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- Membuat tampilan responsif di HP dan laptop -->
 
 <title>Profil Desa Tlogo</title>
+<!-- Judul halaman di tab browser -->
 
 <link rel="stylesheet" href="style.css">
+<!-- Menghubungkan file CSS eksternal -->
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
+<!-- Mempercepat akses ke Google Fonts -->
+
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<!-- Mengambil font Poppins -->
 
 </head>
 
-<body>
+<body> <!-- Awal isi website -->
 
 <!-- ================= NAVBAR ================= -->
 
 <header class="header">
+<!-- Header berisi logo dan menu navigasi -->
 
     <div class="header-title">
-        DESA TLOGO
+        DESA TLOGO <!-- Nama website -->
     </div>
 
     <div class="header-logos">
-        <img src="assets/logo-desa.jpg" class="logo-img">
-        <img src="assets/logo-klaten.jpg" class="logo-img">
+    <!-- Tempat logo desa dan kabupaten -->
+
+        <img src="assets/logo-desa.jpg"
+             class="logo-img">
+             <!-- Logo desa -->
+
+        <img src="assets/logo-klaten.jpg"
+             class="logo-img">
+             <!-- Logo kabupaten Klaten -->
+
     </div>
 
     <ul class="menu">
+    <!-- Menu navigasi website -->
+
         <li><a href="index.html">Beranda</a></li>
         <li><a href="profil.html">Profil</a></li>
         <li><a href="kegiatan.html">Kegiatan</a></li>
         <li><a href="galeri.html">Galeri</a></li>
         <li><a href="kontak.html">Kontak</a></li>
+
     </ul>
 
 </header>
@@ -41,17 +63,21 @@
 <!-- ================= HERO PROFIL ================= -->
 
 <section class="page-hero">
+<!-- Banner utama halaman profil -->
 
     <div class="page-overlay"></div>
+    <!-- Lapisan gelap agar teks terlihat jelas -->
 
     <div class="page-content">
 
         <h1>Profil Desa Tlogo</h1>
+        <!-- Judul halaman -->
 
         <p>
             Mengenal lebih dekat Desa Tlogo,
             Kecamatan Prambanan, Kabupaten Klaten.
         </p>
+        <!-- Deskripsi singkat -->
 
     </div>
 
@@ -60,15 +86,19 @@
 <!-- ================= PROFIL ================= -->
 
 <section class="section">
+<!-- Bagian utama profil desa -->
 
     <div class="profile-card">
+    <!-- Card profil desa -->
 
         <img src="assets/balai-desa.jpg"
              class="profile-image"
              onclick="openImage(this.src)"
              alt="Balai Desa">
+             <!-- Gambar balai desa yang bisa diperbesar -->
 
         <div class="profile-content">
+        <!-- Isi profil desa -->
 
             <h2>Tentang Desa Tlogo</h2>
 
@@ -76,6 +106,7 @@
                 Desa Tlogo merupakan salah satu desa yang berada di wilayah
                 Kecamatan Prambanan, Kabupaten Klaten, Provinsi Jawa Tengah.
             </p>
+            <!-- Penjelasan desa -->
 
             <p>
                 Desa ini memiliki lingkungan yang asri,
@@ -97,10 +128,13 @@
 <!-- ================= DATA DESA ================= -->
 
 <section class="section">
+<!-- Menampilkan data singkat desa -->
 
     <h2 class="section-title">Data Singkat Desa</h2>
+    <!-- Judul section -->
 
     <div class="info-grid">
+    <!-- Grid data desa -->
 
         <div class="info-box">
             <h3>Luas Wilayah</h3>
@@ -129,10 +163,13 @@
 <!-- ================= VISI MISI ================= -->
 
 <section class="section">
+<!-- Menampilkan visi dan misi desa -->
 
     <div class="visi-misi-grid">
+    <!-- Grid untuk visi dan misi -->
 
         <div class="visi-card">
+        <!-- Card visi -->
 
             <h2>Visi Desa</h2>
 
@@ -144,21 +181,16 @@
         </div>
 
         <div class="misi-card">
+        <!-- Card misi -->
 
             <h2>Misi Desa</h2>
 
             <ul>
-
                 <li>Meningkatkan kualitas pelayanan masyarakat.</li>
-
                 <li>Mengembangkan potensi ekonomi desa.</li>
-
                 <li>Menjaga kerukunan dan kebersamaan warga.</li>
-
                 <li>Mendukung kegiatan sosial dan budaya.</li>
-
                 <li>Menciptakan lingkungan yang bersih dan sehat.</li>
-
             </ul>
 
         </div>
@@ -169,40 +201,54 @@
 
 <!-- ================= LIGHTBOX ================= -->
 
-<div id="lightbox" class="lightbox" onclick="closeImage()">
+<div id="lightbox"
+     class="lightbox"
+     onclick="closeImage()">
+<!-- Popup gambar besar -->
 
-    <span class="close-btn">&times;</span>
+    <span class="close-btn">
+        &times;
+    </span>
+    <!-- Tombol tutup popup -->
 
     <img id="lightbox-img" src="">
+    <!-- Gambar yang diperbesar -->
 
 </div>
 
 <!-- ================= FOOTER ================= -->
 
 <footer class="footer">
+<!-- Bagian bawah website -->
 
     <h3>DESA TLOGO</h3>
 
     <p>Kecamatan Prambanan, Kabupaten Klaten</p>
+    <!-- Lokasi desa -->
 
     <p>© 2026 Desa Tlogo</p>
+    <!-- Hak cipta -->
 
 </footer>
+
+<!-- ================= SCRIPT ================= -->
 
 <script>
 
 function openImage(src){
+    // Membuka gambar popup
 
     document.getElementById("lightbox").style.display="flex";
+    // Menampilkan lightbox
 
     document.getElementById("lightbox-img").src=src;
-
+    // Mengganti gambar sesuai yang diklik
 }
 
 function closeImage(){
+    // Menutup lightbox
 
     document.getElementById("lightbox").style.display="none";
-
 }
 
 </script>
