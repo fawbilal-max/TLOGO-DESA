@@ -1,39 +1,71 @@
-<!DOCTYPE html>
-<html lang="id">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!DOCTYPE html> <!-- Mendeklarasikan dokumen menggunakan HTML5 -->
 
-<title>Kegiatan Desa Tlogo</title>
+<html lang="id"> <!-- Menentukan bahasa website adalah Bahasa Indonesia -->
+
+<head> <!-- Bagian konfigurasi halaman -->
+
+<meta charset="UTF-8"> <!-- Mendukung karakter UTF-8 -->
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- Membuat tampilan responsif pada semua perangkat -->
+
+<title>Kegiatan Desa Tlogo</title> <!-- Judul tab browser -->
 
 <link rel="stylesheet" href="style.css">
+<!-- Menghubungkan file CSS -->
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
+<!-- Mempercepat koneksi ke Google Fonts -->
+
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<!-- Mengambil font Poppins -->
 
 </head>
 
-<body>
+<body> <!-- Awal isi website -->
 
 <!-- ================= NAVBAR ================= -->
 
 <header class="header">
+<!-- Header berisi logo dan menu navigasi -->
 
     <div class="header-title">
-        DESA TLOGO
+        DESA TLOGO <!-- Nama website -->
     </div>
 
     <div class="header-logos">
-        <img src="assets/logo-desa.jpg" class="logo-img" alt="Logo Desa">
-        <img src="assets/logo-klaten.jpg" class="logo-img" alt="Logo Klaten">
+    <!-- Wadah logo -->
+
+        <img src="assets/logo-desa.jpg"
+             class="logo-img"
+             alt="Logo Desa">
+             <!-- Logo Desa Tlogo -->
+
+        <img src="assets/logo-klaten.jpg"
+             class="logo-img"
+             alt="Logo Klaten">
+             <!-- Logo Kabupaten Klaten -->
+
     </div>
 
     <ul class="menu">
+    <!-- Daftar menu navigasi -->
+
         <li><a href="index.html">Beranda</a></li>
+        <!-- Menu menuju halaman beranda -->
+
         <li><a href="profil.html">Profil</a></li>
+        <!-- Menu menuju halaman profil -->
+
         <li><a href="kegiatan.html">Kegiatan</a></li>
+        <!-- Menu menuju halaman kegiatan -->
+
         <li><a href="galeri.html">Galeri</a></li>
+        <!-- Menu menuju halaman galeri -->
+
         <li><a href="kontak.html">Kontak</a></li>
+        <!-- Menu menuju halaman kontak -->
+
     </ul>
 
 </header>
@@ -41,17 +73,21 @@
 <!-- ================= HERO ================= -->
 
 <section class="page-hero">
+<!-- Banner utama halaman kegiatan -->
 
     <div class="page-overlay"></div>
+    <!-- Lapisan transparan untuk memperjelas teks -->
 
     <div class="page-content">
 
         <h1>Kegiatan Desa</h1>
+        <!-- Judul halaman -->
 
         <p>
             Berbagai kegiatan masyarakat dan agenda desa yang
             dilaksanakan secara rutin maupun tahunan.
         </p>
+        <!-- Deskripsi halaman -->
 
     </div>
 
@@ -60,29 +96,36 @@
 <!-- ================= KEGIATAN ================= -->
 
 <section class="section">
+<!-- Section utama daftar kegiatan -->
 
     <h2 class="section-title">
         Kegiatan Unggulan Desa
     </h2>
+    <!-- Judul daftar kegiatan -->
 
     <div class="activity-grid">
+    <!-- Grid untuk menyusun kartu kegiatan -->
 
         <!-- CARD 1 -->
         <div class="activity-card">
+        <!-- Kartu kegiatan pertama -->
 
             <img src="assets/kegiatan1.jpg"
                  onclick="openImage(this.src)"
                  alt="Takbir Keliling">
+                 <!-- Gambar kegiatan yang dapat diperbesar -->
 
             <div class="activity-content">
 
                 <h3>Takbir Keliling</h3>
+                <!-- Nama kegiatan -->
 
                 <p>
                     Kegiatan tahunan masyarakat Desa Tlogo
                     dalam menyambut Hari Raya Idul Fitri
                     dengan penuh kebersamaan.
                 </p>
+                <!-- Deskripsi kegiatan -->
 
             </div>
 
@@ -94,15 +137,18 @@
             <img src="assets/kegiatan2.jpg"
                  onclick="openImage(this.src)"
                  alt="Buka Bersama">
+                 <!-- Foto kegiatan buka bersama -->
 
             <div class="activity-content">
 
                 <h3>Buka Bersama</h3>
+                <!-- Nama kegiatan -->
 
                 <p>
                     Momen mempererat silaturahmi antar warga
                     selama bulan suci Ramadan.
                 </p>
+                <!-- Penjelasan kegiatan -->
 
             </div>
 
@@ -114,15 +160,18 @@
             <img src="assets/kegiatan3.jpg"
                  onclick="openImage(this.src)"
                  alt="Konser Desa">
+                 <!-- Foto konser desa -->
 
             <div class="activity-content">
 
                 <h3>Konser Desa</h3>
+                <!-- Nama kegiatan -->
 
                 <p>
                     Hiburan rakyat dan pentas seni yang
                     melibatkan masyarakat Desa Tlogo.
                 </p>
+                <!-- Deskripsi kegiatan -->
 
             </div>
 
@@ -133,22 +182,23 @@
 
             <img src="assets/kegiatan4.jpg"
                  onclick="openImage(this.src)"
-                 alt="Kerja Bakti">
+                 alt="Anniversary Karang Taruna">
+                 <!-- Foto perayaan ulang tahun Karang Taruna -->
 
             <div class="activity-content">
 
                 <h3>Anniversary Karang Taruna</h3>
+                <!-- Judul kegiatan -->
 
                 <p>
-                    Kegiatan untuk merayakan ulang tahun sebuah 
-                    karang taruna di desa tlogo.
+                    Kegiatan untuk merayakan ulang tahun sebuah
+                    Karang Taruna di Desa Tlogo.
                 </p>
+                <!-- Penjelasan kegiatan -->
 
             </div>
 
         </div>
-
-        
 
     </div>
 
@@ -156,27 +206,40 @@
 
 <!-- ================= LIGHTBOX ================= -->
 
-<div id="lightbox" class="lightbox" onclick="closeImage()">
+<div id="lightbox"
+     class="lightbox"
+     onclick="closeImage()">
+<!-- Popup untuk menampilkan gambar ukuran besar -->
 
-    <span class="close-btn">&times;</span>
+    <span class="close-btn">
+        &times;
+    </span>
+    <!-- Tombol tutup popup -->
 
-    <img id="lightbox-img" src="" alt="Preview">
+    <img id="lightbox-img"
+         src=""
+         alt="Preview">
+         <!-- Tempat gambar yang diperbesar -->
 
 </div>
 
 <!-- ================= FOOTER ================= -->
 
 <footer class="footer">
+<!-- Bagian paling bawah website -->
 
     <h3>DESA TLOGO</h3>
+    <!-- Nama desa -->
 
     <p>
         Kecamatan Prambanan, Kabupaten Klaten
     </p>
+    <!-- Lokasi desa -->
 
     <p>
         © 2026 Desa Tlogo. All Rights Reserved.
     </p>
+    <!-- Hak cipta website -->
 
 </footer>
 
@@ -185,20 +248,24 @@
 <script>
 
 function openImage(src){
+    // Fungsi untuk membuka gambar
 
     document.getElementById("lightbox").style.display = "flex";
+    // Menampilkan popup lightbox
 
     document.getElementById("lightbox-img").src = src;
-
+    // Mengubah gambar popup sesuai gambar yang diklik
 }
 
 function closeImage(){
+    // Fungsi untuk menutup popup
 
     document.getElementById("lightbox").style.display = "none";
-
+    // Menyembunyikan popup
 }
 
 </script>
 
-</body>
-</html>
+</body> <!-- Akhir isi website -->
+
+</html> <!-- Akhir dokumen HTML -->
