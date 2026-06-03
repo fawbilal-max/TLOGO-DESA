@@ -1,39 +1,68 @@
-<!DOCTYPE html>
-<html lang="id">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!DOCTYPE html> <!-- Mendefinisikan dokumen sebagai HTML5 -->
 
-<title>Desa Tlogo</title>
+<html lang="id"> <!-- Bahasa utama website adalah Bahasa Indonesia -->
+
+<head> <!-- Bagian konfigurasi website -->
+
+<meta charset="UTF-8"> <!-- Mendukung karakter dan simbol UTF-8 -->
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- Membuat tampilan responsif di HP dan tablet -->
+
+<title>Desa Tlogo</title> <!-- Judul yang tampil di tab browser -->
 
 <link rel="stylesheet" href="style.css">
+<!-- Menghubungkan file CSS -->
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
+<!-- Mempercepat koneksi ke Google Fonts -->
+
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<!-- Mengambil font Poppins -->
 
 </head>
 
-<body>
+<body> <!-- Awal isi website -->
 
 <!-- ================= HEADER ================= -->
 
-<header class="header">
+<header class="header"> <!-- Bagian kepala website -->
 
     <div class="header-title">
-        DESA TLOGO
+        DESA TLOGO <!-- Nama website -->
     </div>
 
-    <div class="header-logos">
-        <img src="assets/logo-desa.jpg" class="logo-img" alt="Logo Desa">
-        <img src="assets/logo-klaten.jpg" class="logo-img" alt="Logo Klaten">
+    <div class="header-logos"> <!-- Tempat logo desa -->
+
+        <img src="assets/logo-desa.jpg"
+             class="logo-img"
+             alt="Logo Desa">
+             <!-- Logo resmi Desa Tlogo -->
+
+        <img src="assets/logo-klaten.jpg"
+             class="logo-img"
+             alt="Logo Klaten">
+             <!-- Logo Kabupaten Klaten -->
+
     </div>
 
-    <ul class="menu">
+    <ul class="menu"> <!-- Menu navigasi website -->
+
         <li><a href="index.html">Beranda</a></li>
+        <!-- Menu menuju halaman utama -->
+
         <li><a href="profil.html">Profil</a></li>
+        <!-- Menu menuju halaman profil -->
+
         <li><a href="kegiatan.html">Kegiatan</a></li>
+        <!-- Menu menuju halaman kegiatan -->
+
         <li><a href="galeri.html">Galeri</a></li>
+        <!-- Menu menuju halaman galeri -->
+
         <li><a href="kontak.html">Kontak</a></li>
+        <!-- Menu menuju halaman kontak -->
+
     </ul>
 
 </header>
@@ -41,30 +70,40 @@
 <!-- ================= HERO ================= -->
 
 <section class="hero">
+<!-- Hero Section adalah tampilan pertama yang dilihat pengunjung -->
 
-    <img src="assets/bg-utama.jpg" class="hero-bg" alt="Desa Tlogo">
+    <img src="assets/bg-utama.jpg"
+         class="hero-bg"
+         alt="Desa Tlogo">
+         <!-- Background utama halaman -->
 
     <div class="hero-overlay"></div>
+    <!-- Lapisan gelap agar teks lebih jelas -->
 
     <div class="hero-text">
+    <!-- Tempat tulisan hero -->
 
         <h1>
             Selamat Datang di Website Desa Tlogo
         </h1>
+        <!-- Judul utama website -->
 
         <p>
             Kecamatan Prambanan • Kabupaten Klaten • Jawa Tengah
         </p>
+        <!-- Informasi lokasi desa -->
 
         <br>
 
         <a href="profil.html" class="btn">
             Profil Desa
         </a>
+        <!-- Tombol menuju halaman profil -->
 
         <a href="kontak.html" class="btn">
             Hubungi Kami
         </a>
+        <!-- Tombol menuju halaman kontak -->
 
     </div>
 
@@ -73,28 +112,43 @@
 <!-- ================= STATISTIK ================= -->
 
 <section class="section">
+<!-- Menampilkan data singkat desa -->
 
     <div class="card">
 
         <h2 style="text-align:center;">
             Statistik Desa
         </h2>
+        <!-- Judul statistik -->
 
         <div class="grid-kegiatan">
+        <!-- Layout grid untuk statistik -->
 
             <div class="kegiatan-item">
+
                 <h2>3500+</h2>
+                <!-- Jumlah penduduk -->
+
                 <p>Penduduk</p>
+
             </div>
 
             <div class="kegiatan-item">
+
                 <h2>950+</h2>
+                <!-- Jumlah kepala keluarga -->
+
                 <p>Kepala Keluarga</p>
+
             </div>
 
             <div class="kegiatan-item">
+
                 <h2>15+</h2>
+                <!-- Jumlah UMKM -->
+
                 <p>UMKM</p>
+
             </div>
 
         </div>
@@ -106,6 +160,7 @@
 <!-- ================= SAMBUTAN ================= -->
 
 <section class="section">
+<!-- Sambutan atau pengantar website -->
 
     <div class="card">
 
@@ -116,12 +171,14 @@
             Website ini menjadi media informasi dan komunikasi
             antara pemerintah desa dengan masyarakat.
         </p>
+        <!-- Paragraf pengenalan website -->
 
         <p>
             Melalui website ini masyarakat dapat memperoleh
             informasi mengenai profil desa, kegiatan,
             galeri dokumentasi serta berbagai informasi lainnya.
         </p>
+        <!-- Penjelasan fungsi website -->
 
     </div>
 
@@ -130,6 +187,7 @@
 <!-- ================= VISI ================= -->
 
 <section class="section">
+<!-- Menampilkan visi desa -->
 
     <div class="card">
 
@@ -141,6 +199,7 @@
             mandiri, sejahtera, dan berbudaya."
 
         </div>
+        <!-- Isi visi desa -->
 
     </div>
 
@@ -149,6 +208,7 @@
 <!-- ================= GALERI DESA ================= -->
 
 <section class="section">
+<!-- Ringkasan galeri -->
 
     <div class="welcome-card">
 
@@ -162,6 +222,7 @@
         <a href="galeri.html" class="btn">
             Lihat Galeri
         </a>
+        <!-- Tombol menuju halaman galeri -->
 
     </div>
 
@@ -170,17 +231,29 @@
 <!-- ================= GOOGLE MAPS ================= -->
 
 <section class="section">
+<!-- Menampilkan lokasi desa -->
 
     <div class="card">
 
         <h2>Lokasi Desa Tlogo</h2>
 
         <iframe
+
         src="https://www.google.com/maps?q=Desa+Tlogo+Prambanan+Klaten&output=embed"
+        <!-- Alamat Google Maps yang ditampilkan -->
+
         width="100%"
+        <!-- Lebar penuh -->
+
         height="400"
+        <!-- Tinggi peta -->
+
         style="border:0;border-radius:12px;"
+        <!-- Menghilangkan border dan memberi sudut melengkung -->
+
         loading="lazy">
+        <!-- Peta dimuat saat diperlukan agar lebih cepat -->
+
         </iframe>
 
     </div>
@@ -199,10 +272,12 @@
             Desa Tlogo, Kecamatan Prambanan,
             Kabupaten Klaten
         </p>
+        <!-- Alamat desa -->
 
         <p>
             📞 0877-3916-8023
         </p>
+        <!-- Nomor telepon desa -->
 
         <a href="https://wa.me/6287739168023"
            target="_blank"
@@ -211,6 +286,7 @@
            Chat WhatsApp
 
         </a>
+        <!-- Tombol membuka WhatsApp -->
 
     </div>
 
@@ -219,28 +295,39 @@
 <!-- ================= LIGHTBOX ================= -->
 
 <div id="lightbox" class="lightbox">
+<!-- Popup untuk memperbesar gambar -->
 
-    <span class="close-btn" onclick="closeImage()">
+    <span class="close-btn"
+          onclick="closeImage()">
+
         &times;
-    </span>
 
-    <img id="lightbox-img" src="" alt="Preview">
+    </span>
+    <!-- Tombol menutup popup -->
+
+    <img id="lightbox-img"
+         src=""
+         alt="Preview">
+    <!-- Tempat menampilkan gambar besar -->
 
 </div>
 
 <!-- ================= FOOTER ================= -->
 
 <footer>
+<!-- Bagian paling bawah website -->
 
     <h3>DESA TLOGO</h3>
 
     <p>
         Kecamatan Prambanan, Kabupaten Klaten
     </p>
+    <!-- Lokasi desa -->
 
     <p>
         © 2026 Desa Tlogo
     </p>
+    <!-- Hak cipta website -->
 
 </footer>
 
@@ -254,28 +341,42 @@
 
 </a>
 
+<!-- Tombol WhatsApp mengambang di pojok layar -->
+
 <!-- ================= BACK TO TOP ================= -->
 
 <a href="#" class="back-top">
     ↑
 </a>
 
+<!-- Tombol kembali ke bagian atas halaman -->
+
 <!-- ================= SCRIPT ================= -->
 
 <script>
 
 function openImage(src){
+    // Fungsi membuka gambar
+
     document.getElementById("lightbox").style.display = "flex";
+    // Menampilkan popup
+
     document.getElementById("lightbox-img").src = src;
+    // Mengganti gambar sesuai yang dipilih
 }
 
 function closeImage(){
+    // Fungsi menutup popup
+
     document.getElementById("lightbox").style.display = "none";
+    // Menyembunyikan popup
 }
 
 </script>
 
 <script src="script.js"></script>
+<!-- Menghubungkan file JavaScript eksternal -->
 
-</body>
-</html>
+</body> <!-- Akhir isi website -->
+
+</html> <!-- Akhir dokumen HTML -->
