@@ -1,39 +1,68 @@
-<!DOCTYPE html>
-<html lang="id">
-<head>
-<meta charset="UTF-8">
+<!DOCTYPE html> <!-- Mendefinisikan dokumen menggunakan HTML5 -->
+
+<html lang="id"> <!-- Bahasa website menggunakan Bahasa Indonesia -->
+
+<head> <!-- Bagian konfigurasi halaman -->
+
+<meta charset="UTF-8"> <!-- Mendukung karakter UTF-8 -->
+
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- Membuat website responsif -->
 
 <title>Kontak Desa Tlogo</title>
+<!-- Judul yang tampil pada tab browser -->
 
 <link rel="stylesheet" href="style.css">
+<!-- Menghubungkan file CSS -->
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
+<!-- Mempercepat koneksi ke Google Fonts -->
+
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<!-- Mengambil font Poppins -->
 
 </head>
 
-<body>
+<body> <!-- Awal isi website -->
 
 <!-- ================= NAVBAR ================= -->
 
 <header class="header">
+<!-- Header berisi logo dan menu -->
 
     <div class="header-title">
         DESA TLOGO
+        <!-- Nama website -->
     </div>
 
     <div class="header-logos">
-        <img src="assets/logo-desa.jpg" class="logo-img" alt="Logo Desa">
-        <img src="assets/logo-klaten.jpg" class="logo-img" alt="Logo Klaten">
+    <!-- Tempat logo -->
+
+        <img src="assets/logo-desa.jpg"
+             class="logo-img"
+             alt="Logo Desa">
+             <!-- Logo Desa Tlogo -->
+
+        <img src="assets/logo-klaten.jpg"
+             class="logo-img"
+             alt="Logo Klaten">
+             <!-- Logo Kabupaten Klaten -->
+
     </div>
 
     <ul class="menu">
+    <!-- Menu navigasi -->
+
         <li><a href="index.html">Beranda</a></li>
+
         <li><a href="profil.html">Profil</a></li>
+
         <li><a href="kegiatan.html">Kegiatan</a></li>
+
         <li><a href="galeri.html">Galeri</a></li>
+
         <li><a href="kontak.html">Kontak</a></li>
+
     </ul>
 
 </header>
@@ -41,16 +70,20 @@
 <!-- ================= HERO ================= -->
 
 <section class="page-hero">
+<!-- Banner halaman kontak -->
 
     <div class="page-overlay"></div>
+    <!-- Lapisan gelap transparan -->
 
     <div class="page-content">
 
         <h1>Kontak Desa</h1>
+        <!-- Judul halaman -->
 
         <p>
             Informasi kontak dan lokasi Desa Tlogo.
         </p>
+        <!-- Deskripsi halaman -->
 
     </div>
 
@@ -59,70 +92,113 @@
 <!-- ================= INFORMASI ================= -->
 
 <section class="section">
+<!-- Bagian informasi kontak -->
 
     <div class="contact-grid">
+    <!-- Grid untuk menyusun card -->
 
         <!-- INFO -->
+
         <div class="contact-card">
+        <!-- Card informasi kontak -->
 
             <h2>Hubungi Kami</h2>
 
             <div class="contact-item">
+
                 <strong>Alamat</strong>
-                <p>Desa Tlogo, Kecamatan Prambanan, Kabupaten Klaten</p>
+                <!-- Judul informasi -->
+
+                <p>
+                    Desa Tlogo, Kecamatan Prambanan,
+                    Kabupaten Klaten
+                </p>
+                <!-- Alamat desa -->
+
             </div>
 
             <div class="contact-item">
+
                 <strong>Email</strong>
-                <p>info@desatlogo.id</p>
+
+                <p>
+                    info@desatlogo.id
+                </p>
+                <!-- Email desa -->
+
             </div>
 
             <div class="contact-item">
+
                 <strong>Telepon</strong>
-                <p>0877-3916-8023</p>
+
+                <p>
+                    0877-3916-8023
+                </p>
+                <!-- Nomor telepon -->
+
             </div>
 
             <div class="contact-item">
+
                 <strong>Jam Pelayanan</strong>
-                <p>Senin - Jumat | 08.00 - 15.00 WIB</p>
+
+                <p>
+                    Senin - Jumat | 08.00 - 15.00 WIB
+                </p>
+                <!-- Jam operasional kantor desa -->
+
             </div>
 
         </div>
 
-      <!-- FLYER -->
-<div class="contact-card">
+        <!-- FLYER -->
 
-    <h2>Unduhan</h2>
+        <div class="contact-card">
+        <!-- Card unduhan -->
 
-    <img
-        src="assets/flyer-desa.jpg"
-        class="flyer-img"
-        alt="Flyer Desa"
-        onclick="openImage(this.src)"
-    >
+            <h2>Unduhan</h2>
 
-    <div class="download-buttons">
+            <img
+                src="assets/flyer-desa.jpg"
+                class="flyer-img"
+                alt="Flyer Desa"
+                onclick="openImage(this.src)">
+                <!-- Flyer desa yang dapat diperbesar -->
 
-        <a href="assets/flyer-desa.jpg"
-           download="Flyer-Desa-Tlogo.jpg"
-           class="download-btn flyer-btn">
-            📥 Download Flyer Desa
-        </a>
+            <div class="download-buttons">
+            <!-- Tempat tombol download -->
 
-        <a href="assets/surat-informasi.pdf"
-           download="Surat-Informasi-Desa-Tlogo.pdf"
-           class="download-btn pdf-btn">
-            📄 Download Surat PDF
-        </a>
+                <a href="assets/flyer-desa.jpg"
+                   download="Flyer-Desa-Tlogo.jpg"
+                   class="download-btn flyer-btn">
+
+                    📥 Download Flyer Desa
+
+                </a>
+                <!-- Tombol download flyer -->
+
+                <a href="assets/surat-informasi.pdf"
+                   download="Surat-Informasi-Desa-Tlogo.pdf"
+                   class="download-btn pdf-btn">
+
+                    📄 Download Surat PDF
+
+                </a>
+                <!-- Tombol download file PDF -->
+
+            </div>
+
+        </div>
 
     </div>
 
-</div>
 </section>
 
 <!-- ================= MAPS ================= -->
 
 <section class="section">
+<!-- Menampilkan lokasi desa -->
 
     <h2 class="section-title">
         Lokasi Desa
@@ -131,12 +207,25 @@
     <div class="maps-container">
 
         <iframe
+
         src="https://www.google.com/maps?q=Desa+Tlogo+Klaten&output=embed"
+        <!-- Link Google Maps -->
+
         width="100%"
+        <!-- Lebar penuh -->
+
         height="450"
+        <!-- Tinggi peta -->
+
         style="border:0;"
+        <!-- Menghilangkan border -->
+
         allowfullscreen=""
+        <!-- Mengizinkan tampilan layar penuh -->
+
         loading="lazy">
+        <!-- Peta dimuat saat diperlukan -->
+
         </iframe>
 
     </div>
@@ -146,28 +235,40 @@
 <!-- ================= LIGHTBOX ================= -->
 
 <div id="lightbox" class="lightbox">
+<!-- Popup untuk memperbesar gambar -->
 
-    <span class="close-btn" onclick="closeImage()">
+    <span class="close-btn"
+          onclick="closeImage()">
+
         &times;
-    </span>
 
-    <img id="lightbox-img" src="" alt="Preview">
+    </span>
+    <!-- Tombol tutup -->
+
+    <img id="lightbox-img"
+         src=""
+         alt="Preview">
+         <!-- Tempat gambar diperbesar -->
 
 </div>
 
 <!-- ================= FOOTER ================= -->
 
 <footer class="footer">
+<!-- Bagian bawah website -->
 
     <h3>DESA TLOGO</h3>
+    <!-- Nama desa -->
 
     <p>
         Kecamatan Prambanan, Kabupaten Klaten
     </p>
+    <!-- Lokasi desa -->
 
     <p>
         © 2026 Desa Tlogo. All Rights Reserved.
     </p>
+    <!-- Hak cipta website -->
 
 </footer>
 
@@ -176,30 +277,36 @@
 <script>
 
 function openImage(src){
+    // Fungsi membuka gambar
 
     document.getElementById("lightbox").style.display = "flex";
+    // Menampilkan popup
 
     document.getElementById("lightbox-img").src = src;
-
+    // Mengubah gambar sesuai yang diklik
 }
 
 function closeImage(){
+    // Fungsi menutup popup
 
     document.getElementById("lightbox").style.display = "none";
-
+    // Menyembunyikan popup
 }
 
 window.addEventListener("keydown", function(e){
+    // Mendeteksi tombol keyboard
 
     if(e.key === "Escape"){
+        // Jika tombol ESC ditekan
 
         closeImage();
-
+        // Menutup popup
     }
 
 });
 
 </script>
 
-</body>
-</html>
+</body> <!-- Akhir isi website -->
+
+</html> <!-- Akhir dokumen HTML -->
